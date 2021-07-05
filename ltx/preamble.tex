@@ -1,0 +1,96 @@
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage[british, english]{babel}
+\usepackage{scrlayer-scrpage}
+\usepackage{scrhack}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage[autostyle=true]{csquotes}
+\usepackage[backend=biber, style=chem-acs, natbib=true, sortlocale=en-GB,]{biblatex}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[exponent-product=\cdot]{siunitx}
+\usepackage[version=4, arrows=pgf-filled]{mhchem}
+\usepackage[varioref=false, journal=jacs]{chemstyle}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage[]{subfig}
+\usepackage{wrapfig}
+\usepackage{caption}
+%\usepackage{showframe}
+%\usepackage{layout}
+
+
+%---   L A N G U A G E - S E T T I N G S   ---%
+\selectlanguage{UKenglish}
+
+%--- F O N T - S E T T I N G S ---%
+\setmainfont[    
+				Ligatures=Rare,
+                WordSpace=1.2,
+                ]{Adobe Caslon Pro}%
+\setsansfont[   
+				WordSpace=1.2, 
+                Scale=MatchLowercase, 
+                %LetterSpace=5.0,
+                UprightFont = * Light,
+                BoldFont = * Medium,
+                ItalicFont = * Light Oblique,
+                BoldItalicFont = * Medium Oblique,
+                ]{Futura Std}%
+\setmonofont[
+				Scale=MatchLowercase,
+				FakeStretch=0.9,
+				]{Roboto Mono}%
+\setmathrm[     
+				Scale=MatchLowercase,
+                ]{Palatino Linotype}%
+
+\addtokomafont{paragraph}{\rmfamily}
+\addtokomafont{title}{\color{unibas-red}}
+\addtokomafont{author}{\large}
+\addtokomafont{date}{\normalsize}
+\addtokomafont{date}{\itshape}
+\addtokomafont{publishers}{\large}
+\addtokomafont{dedication}{\sffamily}
+
+%---   C O L O R - D E F I N I T I O N S   ---%
+\definecolor{unibas01}{RGB}{165,215,210}
+\definecolor{unibas02}{RGB}{30,165,165}
+\definecolor{unibas03}{RGB}{45,55,60}
+\definecolor{unibas04}{RGB}{140,145,150}
+\definecolor{unibas05}{RGB}{210,5,55}
+\definecolor{unibas06}{RGB}{235,130,155}
+\definecolor{unibas07}{RGB}{190,195,200}
+\definecolor{unibas08}{RGB}{0,110,110}
+\definecolor{unibas09}{RGB}{0,0,0}
+\definecolor{unibas10}{RGB}{255,255,255}
+\colorlet{unibas-mint}{unibas01}
+\colorlet{unibas-anthrazit}{unibas03}
+\colorlet{unibas-gray}{unibas04}
+\colorlet{unibas-red}{unibas05}
+\colorlet{unibas-black}{unibas09}
+\colorlet{unibas-white}{unibas10}
+
+%--- P A T H   T O   B I B L I O G R A P H Y ---%
+\addbibresource{./lit.bib}
+
+%--- M I S C . ---%
+\sisetup{detect-all}
+
+\let\red\relax % there's no \RedeclareTextFontCommand
+\DeclareTextFontCommand{\red}{\color{unibas-red}\em}
+
+%--- P A G E   S E T U P ---%
+\areaset{15cm}{24.3cm}
+\clearpairofpagestyles
+\pagestyle{scrheadings}
+\lehead{\leftmark}
+\rohead{\rightmark\hspace*{18mm}}
+\lefoot{\llap{\pagemark~\smash{\rule[-20mm]{.8pt}{27mm}}\hspace{1mm}}}
+\rofoot{~\hfill\rlap{\hspace{1mm}\smash{\rule[-20mm]{.8pt}{27mm}}~\pagemark}}
+\addtokomafont{pageheadfoot}{\normalfont\small\sffamily}
+\setkomafont{pagenumber}{\usekomafont{pageheadfoot}}
+\addtokomafont{pagenumber}{\bfseries}

@@ -1,0 +1,55 @@
+\documentclass[	
+	paper=a4, 
+	fontsize=12pt, 
+	%DIV=11, 
+	BCOR=5.46mm, 
+	headinclude=false, 
+	footinclude=false, 
+	%headheight=85pt, 
+	twoside=true, 
+	twocolumn=false, 
+	parskip=half+, 
+	headsepline=0.8pt, 
+	footsepline=off,
+	%chapterprefix=on
+]{scrbook}
+
+\input{./preamble.tex}
+
+
+%--- T I T L E ---%
+\subject{Research Project}
+\title{Electronic Effects at Bridge Substitution}
+\subtitle{Molybdenum Isocyanides}
+\author{Jakob B. Bilger}
+\date{last updated: \today}
+\publishers{
+		\rule{.3\textwidth}{0.4pt}\\
+      		\vspace{1.4em}
+			\includegraphics[height=42pt]{../logo/Siegel.png} \\
+      		\vspace{0em} 
+		\rule{.3\textwidth}{0.4pt}\vfill
+}
+
+%--- I N C L U D E ---%
+\includeonly{experimental}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                           %
+%                       D O C U M E N T - B O D Y                           %
+%                                                                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\maketitle
+
+
+%\include{introduction}
+%\layout
+
+\include{experimental}
+
+\end{document}
