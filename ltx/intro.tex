@@ -1,0 +1,704 @@
+\chapter{Introduction}
+	\section{Counting Light}
+	\paragraph{Light as a source of energy} for chemical transformations has an energy content by itself. According to Max Planck and Albert Einstein the energy of light $E_l$ is proportional to its \emph{frequency} ($\nu$) with the \emph{Planck constant} ($h$, "\emph{action quantum}") as the proportional factor, the smallest action possible in nature (see eq. \ref{eq:planck1}). 
+
+	\begin{equation}% 
+		\label{eq:planck1}
+		E_l = h\cdot\nu
+	\end{equation}
+
+	Although, $E_l$ is not linearly proportional to the lights \emph{wavelength} ($\lambda$), as depicted in fig. \ref{fig:elSpc} between energies of \qty{1}{\eV} and \qty{6}{\eV}, a reciprocal relationship can be derived. Invoking the phase velocity law for light (see eq. \ref{eq:SoL}) and inserting into eq. \ref{eq:planck1}, eq. \ref{eq:planck2} is derived, were  $E_l$ depends on the reciprocal of the wavelength. The \emph{speed of light} ($c$) is constant, independently of any observers velocity (theory of relativity) and is given in table \ref{tab:const} for its velocity \textit{in vacuo}. In 2019 four SI base units (\textit{System International}) were redefined and based on natural constants, rather then men made standards: "The metre is the length of the path travelled by light in vacuum during a time interval of $\sfrac{1}{299792458}$ of a second." This way the the speed of light is given as a numerically exact value.
+
+	\begin{figure}[h]%
+		\centering
+		\label{fig:elSpc}
+		\includegraphics[scale=1]{./intro/elSpc.png}
+		\caption{Relationship of energy, wavelength and wavenumber of light.}
+	\end{figure}
+
+	\begin{equation}%
+		\label{eq:planck2}
+		E_l = hc\cdot\sfrac{1}{\lambda}
+	\end{equation}
+
+	Or, if the \emph{angular frequency} $\omega = 2\pi\nu$ is used
+
+	\begin{equation}%
+		\label{eq:planck3}
+		E_l = \hbar\omega
+	\end{equation}	 
+
+	In spectroscopy $\sfrac{1}{\lambda}$ from eq. \ref{eq:planck2} is often replaced by \emph{wavenumber} ($\tilde{\nu}$/\unit{\per\cm}). By doing so, the obtained spectrums x-axis scales proportionate to energy. Particularly for IR, but also for UV/Vis spectroscopy (see fig. \ref{fig:elSpc} for respective energy intervals), using the unit \unit{\per\cm} gives easy to use numeric values. To take the higher energy of visible and UV-light compared to IR-light into account, the handy unit "kilo Kayser" (\unit{kK}, \qty{1}{kK} = \qty{1000}{\per\cm}) were used in older times. For the UV/Vis range, numeric values may hence be given as \qty{16-25}{kK}.
+
+	\begin{table}[!h]%
+		\caption{Some important constants and conversion factors.}
+		\label{tab:const}
+	\begin{tabular}{@{=}r@{}l}% 
+		$c$ & \qty{299792458}{\m\per\s} \\
+		$h$ & \qty{6.62607015e-34}{\J\per\Hz} \\\cline
+		\qty{1}{\eV} & \qty{1.602176634e-19}{\J} 
+	\end{tabular}
+	\end{table}
+
+	In the laboratory it may often be convenient to convert one (energy) unit into another. In literature older units, not commonly used any more, may be encountered when comparing own measurements to published results. Also, different units are common in different fields. Lastly it may be beneficial to know a transitions energy in \unit{\eV} to estimate what voltage in \unit{\V} may be inflicted in a (photo-) redoxreaction. In equation \ref{eq:conv}, conversion factors are listed, while figure \ref{fig:conv} shows an easy way to memorise conversion factors.
+
+	\begin{align}%
+		\label{eq:conv}
+		\begin{split}%
+			E/\unit{\J} &= hc\cdot\qty{1e2}{\m\per\cm}\cdot\tilde{\nu}/\unit{\per\cm} \\
+			&= \qty{1.986e-23}{\J\cm}\cdot\tilde{\nu}/\unit{\per\cm} \\[.5ex]
+			E/\unit{\eV} &\approx \qty{1.24e-4}{\eV\cm}\cdot\tilde{\nu}/\unit{\per\cm} \\
+			E/\unit{\eV}\cdot\qty{8080}{\per\eV\per\cm}  &\approx \tilde{\nu}/\unit{\per\cm} \\[.5ex]
+			E/\unit{\eV} &\approx \qty{1240}{\eV\nm}\cdot\lambda/\unit{\nm} 
+		\end{split}
+	\end{align}
+
+	\begin{figure}[h]%
+		\centering
+		\label{fig:conv}
+		\includegraphics[scale=1]{./intro/conv.png}
+		\caption{Triangle as a memorisation help for the rule of proportion of energy units relevant to photochemistry and photophysics. The horizontal bar is read as a division sign and the vertical bar as a multiplication sign between the two known quantities and the third being the one quantity wanted.}
+	\end{figure}
+
+	\paragraph{The wave/particle dualism of light} states that the nature of light emerge as either a wave or as a particle, depending on the experiment. Einstein was awarded the Nobel prise in 1921 for "his discovery of the law of the photoelectric effect", were he introduced a "light quantum", a particle Einstein referred to as a \emph{photon}. In short, this \emph{photoelectric effect} describes a phenomenon were light exceeding a certain frequency hitting a material dislodges electrons from its surface. Hallwachs discovered this effect in 1888, while Lenard in 1902 published an investigation on the intensity of the \emph{photocurrent} dependent on the frequency and \emph{intensity} of incident light. Lightintensity $I_l$ is defined as its \emph{power} (energy per time, $P_l = \sfrac{E_l}{t}$) hitting a specific surface area $A$ , i.e. a power density ($I_l = \sfrac{P_l}{A}$), with the unit \unit{\W\per\square\cm}. In figure \ref{fig:photocurrent} a schematic of the apparatus used by Hallwachs is depicted to the left (A) and to the right (B) one used by Lenard to measure the photocurrent. In the latter a variable counter voltage $U$ can be applied. The electrons dislodged by incident light from the metal electrode $K$ can only reach the counter electrode if their kinetic energy $\epsilon_kin = \sfrac{1}{2} m_ev^2$ surpasses the counter voltage, or
+
+	\begin{equation}[h]%
+		\sfrac{1}{2}m_e\cdot v^2 > e\cdot U
+	\end{equation}
+
+	where $e$ is the elemental charge of an electron. 
+
+	\begin{figure}[h]%
+		\centering
+		\label{fig:photocurrent}
+		\includegraphics[scale=1]{./intro/photocurrent.png}
+		\caption{Apparatus to measure the \textbf{A)} the photocurrent and \textbf{B)} the kinetic energy of photoelectrons.}
+	\end{figure}
+
+	By measuring the counter voltage $U_0$ where the photocurrent $I$ just reaches zero, the maximum kinetic energy of the photoelectrons can be determined:
+
+	\begin{equation}[h]%
+		\epsilon_{max} = \sfrac{1}{2}m_e\cdot v^2_{max} = e\cdot U_0
+	\end{equation}
+
+	Lenard found that the maximum energy of the photoelectrons is independent of the incident monochromatic light intensity, i.e. its wave vector amplitude. According to Maxwell's electromagnetic theory this finding violates the preservation of momentum, as a light wave should have a momentum proportionate to its intensity. 
+
+	Is the frequency of the incident light varied, a linear relationship with the counter voltage $U_0$ is found. If, however, the electrode metal is changed, a parallel translation of the voltage $U_0$ as a linear function of the light frequency with the same slope is found. That means an existing \emph{threshold frequency} $\nu_{th}$ at which no photocurrent is any more observed depends on the material. The slope has the dimension of an action and a numeric value identical to Planck's constant $h$. 
+
+	\begin{equation}[h]%
+		\label{eq:Einstein}
+		\begin{split}%
+			h\cdot\nu &= e\cdot U_0 + h\cdot\nu_{th} \\
+			E_l &= \epsilon_{max} + e\cdot\phi
+		\end{split}
+	\end{equation}
+
+	In eq. \ref{eq:Einstein}, $h\cdot\nu_{th}$ can be thought of as the minimal potential needed to dislodge an electron from the electrode, called the \emph{work function} $\phi$. A single incident photon's energy $h\nu$ must exceed the potential determined by the work function so that an electron is dislodged from the electrode surface. In discrete molecules,
+
+	Besides explaining the corpuscular character of light, the photoelectric effect has also several applications in technical instrumentation. One very important application for the field of photochemistry is the \emph{photonmultiplier tube} (PMT) used in quantitative luminescence measurements (see also page ...).
+
+	Regardless of weather light may be described as a wave or with corpuscular characteristics, it accommodates chemists greatly to think of light as a stream of photons (\emph{photon flux}). Chemists are used to employ small quanta of matter -- particle number $N$ -- to balance chemical equations. In the same way photons may be thought of as reactants (scheme \ref{schm:photochem} a) ). This is crucial to probe mechanisms and will be used to form quantum yield equations. 
+
+	\begin{scheme}[h]%
+		\centering
+		\label{schm:photochem}
+		\includegraphics[scale=1]{./intro/PhotoChem.png}
+		\caption{General scheme for photoreactions were light is depicted \textbf{a)} as a stoichiometric reactant and \textbf{b)} as a excess reactant or catalyst.}
+	\end{scheme}
+
+	In practise, a light source (lamp, LED, laser) may be used to illuminate the reaction mixture for an extended amount of time (up to several hours). This way, often an unknown amount of a large excess photons will hit the reaction mixture (scheme~\ref{schm:photochem} b) ). % light as a catalyst?
+
+	To not always write \num{6.02214076e23} particles (\emph{Avogadro Number}, $N_A$), chemists use \qty{1}{\mol}. Likewise, quantities that depend on the particle number are employed as "per mole", or molar. The weight of matter per mole (\emph{molecular weight}, \unit{\g\per\mol}) is such a quantity. The charge of \qty{1}{\mol} electrons in \unit{\C} (Coulomb) was given the name \emph{Faraday Constant} ($F = \qty{96485.3321233}{\C\per\mol}$ exactly since 2019's redefinition of SI base units). Accordingly, also a molar unit for the energy of photons was defined, the \emph{Einstein} (\unit{\kJ\per\mol}). In eq.~\ref{eq:planck4} is the Planck-Einstein relation the energy of a single photon and is multiplied by $N_A$, the number of particles per mole. If compared to \emph{bond dissociation energies} (BDE/\unit{\kJ\per\mol}), the Einstein is a useful quantity to estimate at what wavelength of incident light a chemical bond may break (see table~\ref{tab:BDE}). % this needs more explanation -> graph with H-H dissociation.
+	A reaction initiated by light absorption that result in a homolytical bond cleavage is referred to as \emph{photolysis}. In fig.~\ref{fig:BDE} is depicted the excitation of \ce{H2} by a photon and its subsequent homolytical cleavage to \ce{H. + H.}. An electron is excited from the groundstate --- the lowest vibrational state of the bonding $\sigma$-orbital --- to its $\sigma^\ast$-orbital. From here it relaxes by elongating the \ce{H-H} bond to its dissociation length. The vibrational levels are only drawn here  ...
+
+	% add bond dissosiation energies for some elements as a table compared to the energy of a certain wavelength. this to show the usefulness of photochemistry. photolysis. light energy significantly larger then thermic energy. one photon 'react' with one particle substrate, no energy distribution.
+	
+	\begin{table}[!h]%
+		\label{tab:BDE}
+		\caption{Selected bond-dissociation energies given in three different units of energy.}
+	\begin{tabular}{%
+		@{}llrrr@{}
+		}
+		\toprule 
+		\multirow{2}*{Bond}& \multirow{2}*{Bond} & \multicolumn{3}{c}{bond-dissociation energy at \qty{298}{\K}} \\
+		\cmidrule(r){3-5}
+		& (\unit{\kJ\per\mol}) & (\unit{\eV}) & (\unit{\nm}) \\
+		\midrule
+		\ce{H3C-H} &Methyl& 439 & 4.550 & 273 \\
+		\ce{(CH3)3-H} &\tbu& 404 & 4.187 & 296 \\
+		\ce{C6H5-H} &phenylic& 556 & 5.763 & 215 \\
+		\ce{CH2CHCH2-H} &allylic& 372 & 3.856 & 322 \\
+		\ce{C6H5CH2-H} &benzylic& 377 & 3.907 & 317 \\
+		\ce{H3C-CH3} &alkane& 347--377 & 3.60--3.90 & 344--318 \\
+		\midrule
+		\ce{H3C-F} && 481 & 4.99 & 248 \\
+		\ce{H3C-Cl} && 350 & 3.63 & 342 \\
+		\midrule
+		\ce{F-F} &fluorine& 157 & 1.63 & 761 \\
+		\ce{Cl-Cl} &chlorine& 242 & 2.51 & 494 \\
+		\ce{Br-Br} &bromine& 192 & 1.99 & 623 \\
+		\ce{I-I} &iodine& 151 & 1.57 & 790 \\
+		\ce{H-H} &hydrogen& 436 & 4.52 & 274 \\
+		\ce{O=O} &oxygen& 498 & 5.15 & 241 \\
+		\ce{N#N} &nitrogen& 945 & 9.79 & 127 \\
+		\bottomrule
+	\end{tabular}
+	\end{table}
+
+	\begin{equation}
+		\label{eq:planck4}
+		\qty{1}{E} = hc\cdot\sfrac{1}{\lambda}\cdot N_A
+	\end{equation}
+
+	Often it is also useful to know how many photons are emitted by a light source. Taking advantage of the manufacturer information given on the light source about its \emph{radiant power} $P/\unit{\W}$, the number of photon may be calculated. The radiant power is the radiant energy $Q$ emitted, transferred or received at all wavelength per unit time $P = \mathrm{d}Q/\mathrm{d}t$. The \emph{intensity}, or \emph{irradiance} $I/\unit{\W\per\square\m}$ is the radiant power received on a surface, such as a cuvette in a spectroscopic measurement, or a reaction flask in a photo chemical experiment. Intensity is often used in the laboratory jargon interchangeably to radiant power, irradiance and photon flux, hence this term will be avoided from here and further on to make a clear distinction. This way the irradiance represents a \emph{power density} of incident light on a surface, the radiant power the power of light and the \emph{photon flux} $N_{Ph}$ the number of photons per area and time . Using the Planck-Einstein relation (eq. \ref{eq:planck2}) for the energy of a single photon as a function of its wavelength, the expression eq. \ref{eq:flux} is derived. Here, the photon flux is given as a function of the wavelength such that the y-axis of a spectrum represents the number of photons per unit time at the given wavelength.
+
+	\begin{equation}
+		\label{eq:flux}
+		N_{Ph}(\lambda) = \frac{P(\lambda)/\unit{\W}\cdot t/\unit{\s}}{E_l(\lambda)/\unit{\J}}
+	\end{equation} 
+
+	There exists also a number of experimental methods to determine $N_{Ph}$ directly. This will be addressed thoroughly in section~\ref{sec:mechanism}.
+
+
+
+	\section{Shining Light on Matter}
+
+		\subsection{State Diagrams}
+		When a molecule \ce{M} absorbs a photon it is excited from its \emph{groundstate} into a state of higher energy \ce{M^\ast}. Light of wavelengths in the range of \emph{visible} (Vis) and \emph{ultra violet} (UV) (\qtyrange{700}{200}{\nm}) is able to excite an electron from (one of) the \emph{highest occupied molecular orbitals} (HOMO) to (one of) the \emph{lowest unoccupied molecular orbital} (LUMO), i.e. an electronic transition between a molecules \emph{frontier orbitals}. The energetic distance between the involved states, must be smaller then the energetic content of the incident light, i.e. the light must at least have the wavelength, or shorter, then wha  t corresponds to the bandgap. This way the Planck-Einstein condition serves as a resonance condition of electronic transitions. To unravel the exact orbitals involved in a transition, often requires a sound understanding of the (quantum mechanical and kinetic) fundamentals and a smooth interplay between several methods from different fields. As such alone the discovery of the triplet state and by that luminescence from a spin-multiplicity other then a singlet state, was a process of 17 years from first hypothesis to final proof. In 1941, Lewis, Lipkin and Magel attributed a non-luminescent "metastable" state in dissolved organic molecules to a triplet state. But first in 1958 EPR spectra of naphthalene published by Hutchison and Mangum definitively confirmed the triplet nature after contributions from others (Terenin 1943 and Lewis and Kasha in 1944). Hence, spectroscopically observed transitions are characterised as a first working hypothesis by their energetic succession (first, second, third ... transition) within their spin-multiplicity manifold and crossings between these spin systems.
+
+		Fig.~\ref{fig:jablonski} shows a graphical representation of these electronically excited states and primary processes between them. Such graphs are called \emph{state diagram} and are referred to as \emph{Jabłoński-diagram} (after the polish physicist Aleksander Jabłoński). States of increasing energy are depicted higher up in the graph, with the groundstate being the lowest one. The Energy is on the y-axis, but is often omitted. 
+
+		\begin{figure}[!h]
+			\centering
+			\label{fig:jablonski}
+			\includegraphics[scale=1]{./intro/jablonski.png}
+			\caption{}
+		\end{figure}
+ 		
+
+		Organic molecules (usually), but also many metal complexes, have a spin state of $S = 0$ as their groundstate, i.e. are in their singlet state. This was given the term $S_0$, where the subscript $> 0$ indicates an excited state, such that $S_1$ marks the first excited singlet state and so forth. States of higher spin multiplicity are depicted shifted to the right of the singlet manifold with each multiplicity in their own separate column. The incremental right shift of higher spin multiplicity states does not indicate any (possible) translation alongside an arbitrary geometric coordinate and is purely for graphical clarity. The lowest triplet state is $T_1$ as is always the triplet of the first excited state, if the groundstate is a singlet state. Excited triplet states will always be lower in energy then their singlet counterparts (see section~\ref{sec:xxx} for more details). Thick lines mark the \emph{zero point} energy of each electronically excited state with finer lines above representing vibrational excited states of each electronic (excited) state. 
+
+		If a molecule absorbs a photon of suitable wavelength, virtually always an electronically together with vibrational excited states is formed. Such \emph{vibronic} (\emph{vibr}ational and elect\emph{ronic}) excited states rapidly relax into a vibrational groundstate (zeropoint energy of the respective electronically excited state) \textit{via} \emph{vibrational relaxation} (VR). This process is also referred to as \emph{thermalisation}, or \emph{vibrational cooling}. Likewise may the term \emph{hot state} be used for vibrational excited states. Heat released during this non-radiative process is absorbed by the solvation shell. The process where a higher excited state non-radiatively relaxes into a lower state of same spin multiplicity, is called \emph{internal conversion} (IC). It is important to note that this process is \textit{iso}-energetic --- the higher state relaxes from its vibrational groundstate into a lower electronic states excited vibrational state of the same energy as the original state. Within a model of potential energy surfaces for electronic states, the nature of such an \textit{iso}-energetic conversion can be easily rationalised (see section~\ref{sec:FC}). An IC is followed by a VR to the vibrational groundstate of the new electronic state. This way, most matter loses its excited state energy. From a hot $S_1$ state formed directly by excitation, a VR brings the chromophore to its vibrational groundstate, from where a IC to a hot $S_0$ state takes place and the chromophore relaxes to its vibronic groundstate \textit{via} VR. To avoid this non-radiative deactivation pathway is one of the basic design principles of a synthetic photo-chemist. Particular in (\textit{poly-})aromatic compounds fine structures are observed. If these chromophores are excited from $S_0 \to S_1$, several vibrational states of $S_1$ are excited too. The energy of these \emph{vibrational propagations} are denoted $E_{0-0}$, for a transition from $S_0$ and a vibrational eigenstate with the vibrational quantum number $v = 0$ to $S_1$ with $v = 0$ (see fig.~\ref{fig:FC} for more detail). If a sufficient heavy atom is present in the chromophore, such as a transition metal, a radiationless transition including a spin-flip is favoured rather then an IC, termed an \emph{intersystem crossing} (ISC). It is \textit{iso}energetic in the same way as ICs, where a vibrational excited triplet (or higher spin multiplicity) state is formed, prior to VR to its zeropoint energy. If a chromophore undergoes a radiative transition to its groundstate with a spin multiplicity \emph{retention}, this is termed \emph{fluorescence} (F), e.g. $S_0 \gets S_1$. If the spin multiplicity change during a radiative process, this is termed \emph{phosphorescence} (P), e.g. $S_0 \gets T_1$. This may only occur if a sufficient heavy atom is present in the chromophore.
+
+		Other processes:
+
+		\begin{figure}[!h]
+			\centering
+			\label{fig:}
+			\includegraphics[scale=1]{./intro/.png}
+			\caption{}
+		\end{figure}
+ 		
+ 	
+		\subsection{time dependency}
+		All photophysical processes, being time dependent, are governed by certain time domains. Each process has a specific average time range at which it occurs, often being indicative of a certain process. In fig.~\ref{fig:jablonski} is depicted the average time ranges for their respective processes. Some of the processes may out-compete each other, depending on specific properties of the chromophore in question. If a molecule is purely organic, fluorescence or internal conversion to the electronic groundstate will be favoured over inter-system crossing. This will change if heavy atoms are introduced so that ISC will be kinetically faster then fluorescence or IC. 
+
+		The rate of photophysical processes are mostly of first-order character. The decay of an excited state such as the emission of light \ce{A^{\ast} ->[k] A + $h\nu$} may be considered a conversion of a single reactant. A second-order process, the photon upconversion \textit{via} triplet-triplet annihilation, will also be discussed in this thesis. Here, two triplet states partake in a transformation yielding only a single photon. 
+
+		The rate law for a first-order process for the decay of an excited molecule \ce{A^{\ast}} is given as 
+
+		\begin{equation}
+		\label{eq:rate}
+		\begin{split}
+			\frac{\mathrm{d}[\mathrm{A^{\ast}}]}{\mathrm{d}t} &= - k\cdot[A^{\ast}] \\
+			\int\mathrm{d}[\mathrm{A^{\ast}}]\frac{1}{[A^{\ast}]} &= \int\mathrm{d}t k \\
+			\ln[A^{\ast}] + C &= -kt \tag*{$\ln[A^{\ast}] + C = 0$} \\
+			\ln[A^{\ast}] &= \ln[A^{\ast}]_0 -kt \\
+			[A^{\ast}] &= [A^{\ast}]_0 \cdot e^{-kt}
+		\end{split}
+		\end{equation}
+
+		A true exponential function will never reach zero, hence, the concentration of excited states will never be fully decayed according to the rate law from eq.~\ref{eq:rate}. It is not clear for how long an excited state is populated, how long is its \emph{lifetime} $\tau$. To what ratio of present excited state concentration $[A^{\ast}]$ to initial excited state concentration $[A^{\ast}]_0$ should the decay have proceeded to be the "true" lifetime?
+
+		Conveniently, the lifetime is defined as 
+
+		\begin{equation}
+		\label{eq:tau}
+			\tau = \sfrac{1}{k}
+		\end{equation}
+
+		Inserting $\tau$ for the time in eq.~\ref{eq:rate} ($k\cdot\tau = 1$) gives a ratio of the concentration of excited states remaining after the timeperiod of one lifetime to the initial concentration of excited states. In other words, one lifetime has passed when the concentration of excited states have decayed to the fraction of $\sfrac{1}{e} \sim 0.37 \sim \sfrac{2}{5}$ of its initial concentration. 
+
+		Analogously, a \emph{halflife} $\tau_{\frac{1}{2}}$ of an excited state is defined as the time after half of the concentration of the initial excited state concentration is decayed. A conversion factor between both lifetimes may be derived from eq.~\ref{eq:rate} as following 
+
+		\begin{equation}
+			\begin{split}
+				-\frac{\ln \sfrac{1}{e} }{\tau} &= k = -\frac{\ln\sfrac{1}{2}}{\tau_{\sfrac{1}{2}}} \\
+				\frac{\ln\sfrac{1}{2} \cdot \tau}{\ln\sfrac{1}{e}} &= \tau_{\sfrac{1}{2}} \\
+				\ln2\cdot\tau &= \tau_{\frac{1}{2}}
+			\end{split}
+		\end{equation}
+
+		% Missing: excitation time explanation
+
+		Assuming, the entire excited state population decays only by means of emission, the radiant rate constant corresponds to the \emph{natural} lifetime of the emissive excited state. The processes depicted in fig.~\ref{fig:jablonski} all exhibit as primary processes a natural lifetime. In non-ideal systems, different possible processes may compete with each other with one or a few processes dominating the decay pathways. The  overall rate constant may then be written as a sum of its individual rate constants from the participating processes. Kinetics of the different processes are discussed in section~\ref{sec:laws}. 
+
+		\begin{equation}
+			k = \sum[i]k_i
+		\end{equation}
+
+		In practice it is not feasible to distinguish all present primary processes. As a first approximation, processes may be divided into non-radiative ($ k_{nr} $) and radiative ( $ k_{r}$ ) decays. In fig.~\ref{fig:jablonski}, vibrational relaxation, internal conversion and intersystem crossing are non-radiative processes, whereas fluorescence and phosphorescence are radiative. Depending on the relative rate constants, it may be possible to describe certain processes as "build-up" processes to "resting states". The very fast absorption and subsequent VR will have finished building-up the $S_1$ state before any of it may have decayed as fluorescence. Due to the long lifetimes of  %Nicht radiativ und radiativ spezifieren
+
+		\begin{equation}
+		 k = k_r + k_{nr}
+		\end{equation}
+
+		\subsection{Absorption and Emission}
+			\paragraph{Absorption and Extinction:} The intensity of light passing through a cuvette containing a solution of a chromophore is weakened by the solutions \emph{absorbance} $A$. Intensity that is not absorbed, reflected or scattered may be measured as the \emph{transmittance} $T$ after the cuvette. The light path length $l$ through the cuvette is the dimension of the cuvette (usually \qty{1}{\cm} for conveniences). The differential intensity change $\mathrm{d}I$ per passed differential beam path length $\mathrm{d}l$ at any point in the cuvette is an exponential gradient proportionate to the concentration of the chromophore in the solution. The proportionality factor is the extinction coefficient.
+
+			\begin{equation}
+			\label{eq:lambertbeer}
+			\begin{split}
+				\frac{\mathrm{d}I}{\mathrm{d}l} &= -\epsilon^{\ast}\cdot c\cdot I \\
+				-\int\mathrm{d}I \frac{1}{I} &= \int\mathrm{d}l \epsilon^{\ast}\cdot c \\
+				-\ln I + C &= \epsilon^{\ast}\cdot c\cdot l \tag*{$\ln I + C = 0$} \\
+				 \ln I_0 - \ln I &= \epsilon^{\ast}\cdot c\cdot l \\
+				 \intertext{logarithmic base change from $e$ to base 10:}
+				 \lg\frac{I_0}{I} &= \frac{\lg\epsilon^{\ast}}{\lg e}\cdot c\cdot l \\
+				 \lg\frac{I_0}{I} &= \epsilon\cdot c\cdot l
+			\begin{split}
+			\end{equation}
+
+			The above relationship between light intensity change and chromophore concentration and pathlength, derived in eq.~\ref{eq:lambertbeer}, was named the \emph{Lambert-Beer law} of absorbance. Here, $\epsilon^{\ast}$ is the exctinction coefficient to base $e$ and $\epsilon$ the exctinction coefficient to base 10. The latter is commonly used and will have the unit $\epsilon$/\unit{\L\per\mol\per\cm}. The quantity of the logarithmic ratio of incident light intensity $I_0$ and transmitted light intensity $I$ is the absorbance $A = \lg\sfrac{I_0}{I}$ of a chromophore solution. The ratio of transmitted light intensity $I$ and incident light intensity $I_0$ is the transmittance $T = \sfrac{I}{I_0}$. Hence, a relationship between absorbance and transmittance is given by
+ 
+			\begin{equation}
+			\begin{split}
+				A &= \lg\frac{I_0}{I} = -\lg T
+				T &= 10^{-A}
+			\end{split}
+			\end{equation}
+
+			The transmittance has the numerical values between 0 and 1. The absorbance, however, does not have a strict upper boundary; with $A = 4$ leaving practically no light intensity through. A quantity that gives an easy ratio of how much light is absorbed, scattered or reflected to the incident intensity, may be termed the absorptance $\alpha$. In table~\ref{tab:absorptance}, a quick numeric relationship between the absorbance and absorptance is given and in eq.~\ref{eq:qty} a short summary of the three important quantities in light extinction.
+
+			\begin{table}[h]
+			\label{tab:absorptance}
+			\caption{Numeric relationship between the absorbance and absorptance}
+			\begin{tabular}{%
+				@{}l|rrrrrrrrrr@{}
+			}
+				Absorbance $A$		& 0.1 & 0.2 & 0.3 & 0.4 & 0.5 & 0.6 & 0.7 & 0.8 & 0.9 & 1.0 \\
+				\midrule
+				Absorptance $\alpha$& 0.21 & 0.37 & 0.50 & 0.60 & 0.68 & 0.75 & 0.80 & 0.84 & 0.87 & 0.90 
+
+			\end{tabular}
+			\end{table}
+
+			\begin{description}
+			\label{lst:qty}
+				\item[Absorbance]$A = \lg\frac{I_0}{I}$ \\
+				\item[Transmittance]$T = \frac{I}{I_0}$ \\
+				\item[Absorptance]$\alpha = 1 - T$
+			\end{description}
+
+			For high chromophore concentrations, the absorbance deviates from a linear relationship with the concentration towards a saturation curve. The Lambert-Beer law is only valid at small concentrations to prevent self aggregation effects. 
+
+			In photochemistry, were light drives a reaction, a sufficient even irradiation in the bulk of the reaction mixture, not just the vessel surface, should be ensured. The penetration depth of light depend on the absorbance, and by that on the extinction coefficient and the concentration of the chromophore --- potentially a photocatalyst, or the reactant itself. \ce{Ru(bpy)_3^{2+}} is a typical photocatalyst having been the subject of many investigations. It features a broad and strong absorption, with $\epsilon\sim \qty{14600}{\L\per\mol\per\cm}$ at its maximum of \qty{452}{\nm}. Considering a solution of \ce{Ru(bpy)_3^{2+}} with a concentration of \qty{1}{\milli\mol\per\L} according to eq.~\ref{eq:rubpy3exp} will already \qty{96.5}{\percent} of the incident (monochrome) light of \qty{452}{\nm} be absorbed after \qty{1}{\mm}. 
+
+			\begin{equation}
+			\label{eq:rubpy3exp}
+			\begin{split}
+				\alpha &= 1 - 10^{-\epsilon c l} \\
+				\alpha &= 1 - 10^{\qty{14600}{\L\per\mol\per\cm} \cdot \qty{1}{\milli\mol\per\L \cdot \qty{0.1}{\cm} }}
+			\end{split}
+			\end{equation} 
+
+			It is therefore necessary to work at (very) low concentrations. For instance, to be able to stay below an absorbance of 0.1, where already \qty{21}{\percent} of incident light will be absorbed, a \ce{Ru(bpy)_3^{2+}} solution would need to have a concentration of \qty{6.8e-6}{\mol\per\L}, if a \qty{450}{\nm} light source is used.
+
+			\paragraph{Emission and Luminescent Quantum Yield}
+			Regardless of the response irradiation triggers when absorbed by matter, the quantity of the outcome, the photo product, being it (non-radiative) chemical transformations or luminescence, is measured as a \emph{quantum-yield} $\Phi$. Additionally, is the power of light irradiated as a "yield" of a chemical reaction in \emph{chemo-} and \emph{bio-luminescence} given as a quantum-yield (see fig.~\ref{fig:biolum} for two examples of bio-luminescence). The power of electrons used per power of photons released in \emph{electro-luminescent} devices (LED) will also be expressed as a quantum-yield. As such a quantum-yield is the quantity in \unit{\mol} of any product formed by absorption or emission of light per quantity photons absorbed at a given wavelength, or per quantity reactant to trigger luminescence. Due to the many processes quantified by a quantum-yield, it is important to always specify which process is referred to as a suffix. In this thesis mostly luminescent quantum-yields $\Phi_{Em}$ will be considered, such as fluorescence $\Phi_{Fl}$ and phosphorescence $\Phi_{Ph}$ quantum-yields. In common will all processes discussed here, have the absorption of light as an initial trigger. In most cases the quantum-yield will be independent of the excitation wavelength for reasons discussed later (Kasha's rule, \pageref{kasha}).
+
+			\begin{figure}[!h]
+				\centering
+				\label{fig:biolum}
+				\includegraphics[scale=1]{./intro/biolum.png}
+				\caption{}
+			\end{figure} 
+
+			From eq.~\ref{eq:OY} can be seen that the ratios of emitted light to absorbed light defining the quantum-yield may be measured either in light power, or more common in light intensity. These ratios will both be equal to the ratio of the total number of photons emitted $N_{Em}^{Ph}$ to photons absorbed $N_{Abs}^{Ph}$ (for a luminescent quantum-yield).
+
+			\begin{equation}
+				\label{eq:QY}
+		 		\Phi_{Em} = \frac{P_{Em}}{P_{Abs}} = \frac{I_{Em}}{I_{Abs}} = \frac{N_{Em}^{Ph}}{N_{Abs}^{Ph}}
+			\end{equation}
+
+			Likewise can the quantum-yield be interpreted kinetically. If the radiative rate is much faster then any other rate that may deactivate the luminescent state (the $S_1$ or $T_1$ state), then the radiative process will dominate the excited state relaxation. From the stand-point of a synthetic photo-chemist, a chromophore should ideally be designed to have as slow as possible non-radiative decay processes of the luminescent state. To identify the most important photo-physical processes and to determine their rate lies at the heart of photo-chemistry. From such information gathered, unfavoured deactivation pathways may be understood and informed design choices considered for a next iteration of the desired chromophore.
+
+			\begin{equation}
+				\label{eq:QYkin}
+		 		\Phi_{Em} = \frac{\sum k_r}{\sum k_r + \sum k_{nr}} 
+			\end{equation}
+
+
+
+	\section{Intensity and Rate of a Transition}
+	\label{sec:laws}
+	Intensity and rate of a transition are words describing different phenomena but with the same intrinsic cause --- the \emph{probability} of a transition. In this context, a transition associated with a low intensity such as a small extinction coefficient, will be a transition with a low probability. If the radiant rate constant is slow, as in a phosphorescence, a low transition probability is associated with it. These types of transitions with either a small intensity, or slow rate are said to be \emph{forbidden transitions}, whereas the opposite --- transitions with high intensities and fast rates --- will be analogously \emph{allowed transitions}. These terms should not be taken absolutely, in the sense that forbidden does not mean "will not take place at all", rather then only with a small likelihood. Within the concept of transition probabilities a set of rules describe whether a transition is allowed or forbidden, the \emph{selection rules}. To determine the selection rules and by that the intensity of a transition, however, it is necessary to look at the very nature of the interaction of light with matter. Luckily, some of the most important rules may already be understood intuitively with a classic model as an analogy, or by simple transformations of an expectation value and its wavefunctions.
+
+		\subsection{Matter Radiation Interaction}
+		For the purpose of this short introduction, light as an electromagnetic wave described by \emph{Maxwell's equations} may be viewed as two \emph{oscillating fields} with wave vectors perpendicular to each other, but with the same frequency. Other properties, such as the transversal oscillation to their direction of propagation, the polarisation plane and the phase shift of both fields towards each other, will be mentioned when needed, but neglected here. For electronic together with vibrational and rotational transitions, the effect of the electric field will be considered and a possible influences of a magnetic field is on the topic of the spectroscopy of \emph{nuclear magnetic} (NMR) and \emph{electron paramagnetic resonance} (EPR). 
+
+		\begin{figure}[!h]
+			\centering
+			\label{fig:antenna}
+			\includegraphics[scale=1]{./intro/antenna.png}
+			\caption{light as an oscillating electric field inducing a polarisation in an antenna.}
+		\end{figure}
+
+			\subsubsection{Dipole Moment}%need some explanation on why a dipole is crucial/how light couples to a dipole ...
+			An electric field has the ability to move electric charges within its oscillation plane. If this happens in a wire as a dipole, the oscillating electric field induces an alternating current within its polarisation plane in the wire that may be understood as a signal received by such a dipole antenna. A chromophore molecule may be viewed as a "light antenna" (this term was used for the light collecting structures around \emph{photo system I}  and \emph{photo system II} in the photosynthesis of plants). For a photon to be absorbed, the electric field need to pass by a chromophore for its entire wavelength. The chromophore being much smaller then the wavelength, may be approximated as a dot. Hence, a light wave with the wavelength of \qty{450}{\nm} will take \qty{1.5e-15}{\s} to pass the chromophore to be absorbed (the order of magnitude of absorption time given in fig.~\ref{fig:jablonski}). In a simple dipole antenna, the metals free electrons may be easily moved; in a chromophore also electron density need to be redistributed during the transition, being "moveable" by the incident oscillating electric field. Hence, a transition intensity will be angle dependent on a microscopic scale on the polarisation plane of light and the one of the molecule, ideally being orthogonal to each other. A dipole is described by the two opposing charges $-q$ and $+q$ with the distance $r$, the magnitude of their distance vector $\bm{r}$ between them. The \emph{dipole moment} $\bm{\mu}$ is a vector pointing from the negative to the positive charge with its magnitude $\mu$ measured in the non-SI unit debye, \qty{1}{D} = \qty{3.336e-30}{\C\m}.
+
+			\begin{equation}
+				\label{eq:dipoleMoment1}
+				\bm{\mu} = q\cdot \bm{r}
+			\end{equation}
+
+			In atomic units, where a positive charge originates in (core) protons and negative charges in electrons, the electron-proton distance defines the dipole moment. In a molecule with several electrons and atom cores, the molecular dipole moment will be a sum over all individual dipole moments. This approach is called a multipole development $\bm{\mu} = \sum_i q_i\cdot \bm{r}_i$. The dipole moment of a specific state will be spanned as a resulting moment of the molecules electron density interacting within the \emph{Born-Oppenheimer approximation} with a static core field. This simple picture already shows that a dipole needs to be present together with the ability to be polariseable for a transition to occur, namely for the electric field of light to interact with matter.
+
+			For a more precise picture and ultimately for quantitative predictions of a transition intensity, a quantum-mechanic description is needed. Classical (Newtonian) quantities can be used to build a quantum mechanical operator whose \emph{expectation value} will be the sought of result of its \emph{eigenvalue equation}. Using the above stated relation of a classical dipole moment (eq.~\ref{eq:dipoleMoment1}), the quantum mechanical dipole moment operator is defined as following together with its eigenvalue equation for the groundstate written in its \emph{bar-ket} (\emph{Dirac}) notation
+
+			\begin{equation}
+				\begin{split}
+				\label{eq:dipoleMoment2}
+				\bm{\hat{\mu}} &= -e\left(\sum\bm{r}_i-\sum Z_j\cdot\bm{R}_j\right) \\
+				\bm{\mu} &= \langle \Psi_G | \bm{\hat{\mu}} | \Psi_G \rangle
+				\end{split}
+			\end{equation}
+			
+			The positions of $i$ electrons are described by the vector $\bm{r}_i$ and the position of $j$ atom cores by the vector $\bm{R}_j$. (A capital letter was used here for the core vector, following a convention often used in chemistry, where quantities of electrons are abbreviated with lowercase letters and quantities related to the core by capital letters. This is by no means a matrix and should not by confused with else used notation conventions using bold capital letters for matrices.) The overall charge of the core is given by $Z_j$ and $e$ is the elemental charge. 
+
+			\subsubsection{Transition Moment}
+			The interaction of light with matter is inherently a time dependent process. Hence, the \emph{time dependent Schrödinger equation} is invoked with $\tau$ being an arbitrary spatial coordinate, $\hat{H}$ the \emph{Hamilton operator}, $t$ the time and $i$ an imaginary number.
+
+			\begin{equation}
+				\hat{H}\Psi(\tau, t) = -\frac{\hbar}{i}\frac{\partial}{\partial t}\Psi(\tau, t)
+			\end{equation}
+
+			From the time dependent wave function $\Psi(\tau, t)$ may the time dependency be separated of from the spatial wave function.
+
+			\begin{equation}
+				\Psi(\tau, t) = \psi(\tau)\cdot e^{-\frac{i}{\hbar} Et}
+			\end{equation}
+
+			The interaction of light may be treated as a time dependent perturbation to the time independent wavefunction $\Psi^0$ were the overall Hamilton operator is 
+
+			\begin{equation}
+			\begin{split}
+				&\hat{H} = \hat{H}^0 + \hat{H}^1 & \\
+				&\hat{H}^0 		 	&\mathrm{Hamilton operator of the unpertubed system} \\
+				&\hat{H}^1 \hfill	&\mathrm{time dependent perturbation operator (interaction operator)}
+			\end{split}
+			\end{equation}
+
+			and the electrical dipole interaction introduced as the perturbation operator with ${\large \varepsilon}$ the amplitude and $\omega$ the angular frequency of the electric field ($\omega = 2\pi\nu$). 
+
+			\begin{equation}
+				\hat{H}^1 = \hat{\mu}\mathcal{E}\cos(\omega t)
+			\end{equation}
+
+			A chromophore and all its groundstate properties will be fully described by the time-independent Schrödinger equation $\hat{H}\Psi_G = E\Psi_G$, including its dipole moment. It is assumed that the perturbation is "switched on" at time $t=0$, when the electric field of light ($\mathcal{E}\cos(\omega t)$) couples to the dipole moment of the chromophore in question. If the outlined ansatz is solved for a two-level system ($\Psi_G, \Psi_h$) the following integrals of the perturbation operator are found
+
+			\begin{equation}
+			\label{eq:intPerturbation}
+			\begin{split}
+				\langle \psi_G^0|\hat{H}^1|\psi_G^0 \rangle &= \mathcal{E}\Mu_{GG}\cos(\omega t) \\ 
+				\langle \psi_G^0|\hat{H}^1|\psi_h^0 \rangle &= \mathcal{E}\Mu_{Gh}\cos(\omega t)e^{-i\omega_0t} \\ 
+				\langle \psi_h^0|\hat{H}^1|\psi_G^0 \rangle &= \mathcal{E}\Mu_{hG}\cos(\omega t)e^{+i\omega_0t} \\ 
+				\langle \psi_h^0|\hat{H}^1|\psi_h^0 \rangle &= \mathcal{E}\Mu_{hh}\cos(\omega t) 
+			\end{split}
+			\end{equation}
+
+			In eq.~\ref{eq:intPerturbation}, $\Mu_{ab} = \langle \psi_a|\hat{\mu}|\psi_b \rangle$ are the matrix elements of the \emph{transition moment}. This describes the change of the dipole during a transition and may indeed be orthogonal to the dipole moment. The diagonal elements of the transition dipole matrix describe a "self transition" and are always zero $\Mu_{GG} = \Mu_{hh} = 0$. Only if the off-diagonal elements are different from zero, the expectation value of the perturbation operator will have a non-trivial solution different from zero.
+
+			A good ansatz for a transition wavefunction in a two state system would be the sum of the ground and the excited state. Analogously to the LCAOMO approach, each state wavefunction is weighted by a coefficient --- in this case time dependent. 
+
+			\begin{equation}
+				\label{eq:wvfncAnsatz}
+				\Psi(\tau , t) = c_G(t)\Psi^0_G(\tau , t) + c_h(t)\Psi^0_h(\tau , t)
+			\end{equation} 
+
+			If the integrals of the perturbation operator --- the second and third from eq.~\ref{eq:intPertubation} --- are used to solve eq.~\ref{eq:wvfncAnsatz} for the coefficients, only a slow time dependency is considered, hence, the high frequency terms $e^{\pm i\omega_0t} = 0$. These factors describe the time dependent contribution of a state to the overall state. In other words, the square of the coefficients $c_h^{\ast}(t)c_h(t) = \left|c_h^2\right|$ is the probability to find the system in the state $h$ at time $t$. The result for is
+
+			\begin{equation}
+				\label{eq:transProb}
+				c_h^{\ast}(t)c_G(t) = \frac{1}{4\hbar^2} \mathcal{E}^2\Mu^2_{Gh} t
+			\end{equation} 
+
+			This very important result shows that the probability to find the system in state $h$ at time $t$ is proportionate to the square of the electromagnetic field $\mathcal{E}$ and to the square of the transition moment $\Mu_{Gh}$. So far, only a transition from a energetically lower groundstate $\Psi_G$ to an energetically higher laying excited state $\Psi_h$ has been considered upon light absorption. In fact, equation~\ref{eq:transProb} does not tell in which direction the transition goes. If the system already resides in the excited state, it can equally well transition to the lower groundstate. This transition is accompanied by light emission. The same consideration as above are still valid, only the indices need to be changed. Due to such an emission being triggered by interaction with light, this is referred to as a \emph{stimulated emission} in opposite to a \emph{spontaneous emission}. After an excitation from the groundstate to the excited state due to absorption of a photon, another photon may be absorbed, stimulating an emission. This process may repeat itself several times, \textit{i.e.} the system may oscillate between these two states. The oscillating frequency will be the \emph{Rabi frequency} $\Omega$:%check if correct!!
+
+			\begin{equation}
+				\Omega = \frac{1}{2\hbar} \mathcal{E}\Mu_{Gh}
+			\end{equation}
+			
+			 Hence, it is concluded:
+
+			\begin{itemize}
+				\item Only if $\Mu_{Gh} \neq 0$ a transition is allowed and will occur. \\
+				\item The intensity and probability of a transition is proportional to the square of the transition dipole matrix elements $\propto |\Mu_{Gh}|^2$.
+			\end{itemize}
+ 
+			Systematic evaluation of all transition dipole matrix elements $\Mu_{Gm}$ will give the selection rules of a transition. 
+
+
+		\subsection{Laws of Photochemistry}
+
+			\subsubsection{Contribution of Spin}
+			When the Bohr resonance condition is met, that being $\Delta E_{Gm} \leq h\nu$, a transition from the electronic groundstate to the first excited state may take place. In eq.~\ref{eq:intPerturbation}, $\omega_{Gh}$ is the resonance frequency of the considered two-level system such that $\Delta E_{Gh} = E_h - E_G = \hbar\omega_{Gh}$. The transition will take place if the frequency of the incident field is higher then the resonance frequency of the chromophore ($\omega \geq \omega_{Gh}$). It is assumed that the molecule is initially in its vibrational lowest state ($v=0$) of the lowest electronic state $G$. A transition may reach vibrational excited states ($v'\geq 1$) of an electronic excited state $h$. For an emission the process is inverted and from $v'=0$ any $v$ of the electronic groundstate may be reached. Hence, the matrix element of the transition moment for the single vibronic absorption band $G,0 \to h,v'$ may be written as
+
+			\begin{equation} 
+				\label{eq:transitionMoment}
+				\Mu_{G,0 h,v'} = \langle \psi_{G,0}|\hat{\mu}_{G,0 h,v'}|\psi_{h,v'}\rangle
+			\end{equation}
+
+			To interpret such an integral, it is helpful to separate certain contribution off. If no magnetic field is present, $\hat{\mu}$ has no effect on the spin of the system. Additionally is $\hat{\mu}$ a multiplicative operator. Together with the spatial operator $\hat{x}$, belongs the dipole operator to the family of commutative operators. Within the Born-Oppenheimer approximation, it is stated that the light electrons $e$ move much faster then the heavy cores $N$ of a molecule. This way, the energy of the electrons ($\hat{T}_e + \hat{V}_{ee} + \hat{V}_{eN}$) may be treated independently of the core energy ($\hat{T}_N + \hat{V}_{NN}$). This leads to the separation ansatz were the true wavefunction is factored into a electronic function $\psi_{el}$, a vibrational wavefunction $\chi$ and the spinor $\sigma$.
+
+			\begin{equation}%multiplicity rule
+				\label{eq:multRule}
+				\Mu_{G,0 h,v'} = \langle \psi_{G}\chi_0|\hat{\mu}|\psi_{h}\chi_{v'}\rangle\langle\sigma_{G}|\sigma_{h}\rangle
+			\end{equation} 
+
+			It is demanded that all wavefunctions are \emph{orthonormal}: Only if $\sigma_{G} = \sigma_{h}$ the integral $\langle\sigma_{G}|\sigma_{h}\rangle$ will have a magnitude different from zero. Hence, the overall transition dipole matrix elements are only different from zero if the spin is retained during the transition. This is the selection rule of multiplicity. This approximation breaks down whenever there is a significant interaction between the electrons and and the vibrations (vibronic coupling) or between the spins and the orbit momentum of the electrons (spin-orbit coupling). %p46 Turro
+
+			\subsubsection{Spatial Dependency of Dipole Moments}
+			Dipole moments $\mu$ may have a space independent, \textit{i.e.} a permanent factor $\mu_0$ and a factor dependent on a spatial coordinate $\mu_1(\tau)$. $\tau$ denotes a generalised space coordinate, $x$ or $\phi$, for instance. Since $\hat{\mu}$ can only operate on the space coordinates, the space independent part of the dipole moment $\mu_0$ is only a constant factor with regard to the dipole operator. As can be seen from eq.~\ref{eq:dipoleSym}, the space independent dipole contribution vanishes for a transition ($\delta_{Gm}$ denotes the Kronecker delta). In other words, an electric dipole transition is only allowed if the dipole moments change with the spatial coordinates. On the consequences, see next section.
+
+			\begin{equation}
+			\label{eq:dipoleSym}
+			\begin{split}
+				\mu &= \mu_0 = \mu_1(\tau) \\
+				\mu_{Gh} &= \int \mathrm{d}\tau \psi_G^{ast}\mu_0\psi_h \\
+				&= \mu_0\int \mathrm{d}\tau \psi_G^{ast}\psi_m = \mu_0\delta_{Gh}
+			\end{split}
+			\end{equation}
+
+			\subsubsection{Symmetry of State Wavefunctions}
+			\label{sec:sym}
+			A helpful tool to determine which transition are possible is to consider the symmetry of the chromophore in question. Many integral of the transition moment may evaluate to zero within a certain point group. As an intuitive example in stead of a thorough mathematical deduction, may the behaviour of an integrand serve with respect to an inversion centre. This is an important symmetry element for orbitals, for instance (see fig.~\ref{fig:inversion}). A function having an inversion centre may be considered symmetric (\emph{even}, $g$, "gerade") or antisymmetric (\emph{odd}, $u$, "ungerade"), respectively, regarding the inversion. This is said to be the \emph{parity} of the function. 
+
+			\begin{figure}[h]
+				\centering
+				\label{fig:inversion}
+				\includegraphics[scale=1]{./intro/inversion.png}
+				\caption{Depiction of a functions symmetry with respect to an inversion centre. Orbitals are also centro-symmetric functions.}
+			\end{figure}
+
+			An integrand running over the limits $-\infty,\infty (\tau)$ will vanish for an antisymmetric function and only have a (possible) finite value for a symmetric function with respect to an inversion centre.
+			Considering the integrand $\langle\psi_G|\hat{\mu}|\psi_h\rangle$, their are three elements, the wavefunctions of the two states considered for the transition ($\psi_G$, $\psi_h$) and the dipole operator ($\hat{\mu}$). The dipole operator, resembling a spatial multiplicative operator weighted by the charges, is anti-symmetric, so that the two states must be of different parity for the transition moment not to vanish. This may be writes in terms of their parity $g \otimes u \otimes u = g$.  In other words, a transition is only possible between an odd and an even state. This is the core of the parity selection rule that boils down to the \emph{Laport law} for complexes of the point group $O_h$.
+
+			A more generalised approach that is not only valid for chromophores having an inversion centre (such as tetrahedral complexes), may be provided by group theory. Here, each state wavefunction transforms with respect to the chromophores point group as an irreducible representation $\Gamma$ of said group. Possible symmetry races (as an irreducible representation) are after Mulliken
+
+			\begin{description}
+				\item[main symbol] \hfill \\ 
+				\begin{description}
+					\item[one dimensional] \hfill \\
+						\begin{description}
+							\item[$A$] symmetric with respect to main axis of rotation $\mathcal{X}(C_n) = +1$ \\
+							\item[$B$] anti-symmetric with respect to main axis of rotation $\mathcal{X}(C_n) = -1$ \\						
+						\end{description}
+					\item[two dimensional] \hfill \\
+						E
+					\item[three dimensional] \hfill \\
+						T
+				\end{description}
+				\item[subscript] \hfill \\
+					\begin{description}
+						\item[$g$] even with respect to an inversion centre $\mathcal{X}(i) = +1$ \\
+						\item[$u$] odd with respect to an inversion centre $\mathcal{X}(i) = -1$\\
+					\end{description}
+				\item[superscript] \fill \\
+					\begin{description}
+						\item[$+$] symmetric with respect to a vertical mirror plane $\mathcal{X}(\sigma_v) = +1$\\
+						\item[$-$] antisymmetric with respect to a vertical mirror plane $\mathcal{X}(\sigma_v) = -1$\\
+					\end{description}
+				\item[prefixed numbers] enumeration of individual irreducible representation according to their energy\fill \\
+			\end{description}
+
+			The transition moment transforms as the three coordinates $x,y,z$ and may be assigned to a symmetry race using a character table. Usually, to the right of the characters of each irreducible representation in a character table is given a list of a set of coordinates that transform as the irreducible on that line. These lists are a crucial tool to determine allowed transitions not only for electronic, but also for rotational, vibrational and non-dipole (Raman scattering) transitions, for instance.
+
+			By multiplying the three compounds of the integrand $\langle\psi_G|\hat{\mu}|\psi_h\rangle$ as their irreducible representation of the chromophores point group, the direct product of aforementioned representation is gained. This product representation $\Gamma_G\otimes\Gamma_{\hat{\mu}}\otimes\Gamma_h=\Gamma_{G\hat{\mu}h}$ is also a representation of the group and if the it is a product of a degenerate representation, the product is reducible. Only if the direct product is or contains the total symmetric representation the transition moment will not vanish.
+
+			In practice, the direct product of the irreducible representation of the initial and final state may be formed $\Gamma_G\otimes\Gamma_h=\Gamma_{Gh}$. If $\Gamma_{Gh}$ is or contains (after reduction) the irreducible representation of the symmetry group that transform like the $x,y,z$ coordinates --- the representations of the component of the dipole operator --- is the electronic transition allowed.
+
+			\subsubsection{Contribution of Vibration, Frank-Condon}
+			The Born-Oppenheimer approximation is often formulated as follows: With the atomic cores being much heavier then the electrons, the electrons adopt (near) instantly to any change to the core coordinates. While this is a valid interpretation well known as the adiabatic approximation of quantum mechanics, it may not always be helpful as it emphasises a classical viewpoint. The existence of two states (vibronic, for instance) in a transition may be viewed as time dependent; a transition between them a probability in time. This is obviously not true, due to a fundamental quantum mechanical principle, where these states have existed from the beginning. A possibility to circumvent such a (miss-)interpretation would be to view the energetic eigenstates of the core ($T_{N}(\bm{R}) + V_{NN}(\bm{RR})$, where $\bm{R}$ are the core $N$ coordinates) as so much smaller compared to the electronic eigenstates ($T_e(\bm{r}) + V_{ee}(\bm{rr}) + V_{eN}(\bm{rR})$, where $\bm{r}$ are the electron $e$ coordinates) that the interaction between the core movement and the electron movement are not coupled. This opens the way to treat the electronic and core wavefunction independently, where the total is the product of the electronic and core wavefunction $\Psi_{total} = \psi_e\psi_N$. For quantum mechanical calculations is $T_N$ omitted in a first step and added later on. The Schrödinger equation is now solved as a function (in small incrementation) of the core coordinates, hence the reminiscence to the adiabatic theorem. A found minimum of this \emph{electron potential energy surface} would correspond to the \emph{equilibrium distance} ($R_e$) between two cores ($\bm{R_N} - \bm{R_M}$) in a diatomic molecule and to the equilibrium geometry in a "larger" molecule, with $R$ being a generalised core coordinate. With the electronic term being dependent on the core coordinates, such a potential will also be a \emph{core potential energy surface} for vibrations. 
+
+			Following the BO-approach outlined above, the transition moment from eq.~\ref{eq:multRule} may as well be separated into an electronic and a core part (without proof) in eq.~\ref{eq:FC}
+
+			\begin{equation}
+				\label{eq:FC}
+				\Mu_{G,0 m,v'} = \langle \psi_{G}|\hat{\mu}|\psi_{h} \rangle\langle\chi_0|\chi_{v'}\rangle
+			\end{equation}
+
+			Here, the integral $\langle\chi_0|\chi_{v'}\rangle$ over the 'vibrational', core dependent wavefunctions $\chi$ is called the \emph{Franck-Condon (FC) integral}. Assuming the Einstein convention for sums, the FC integral is a sum over all vibrational eigenstates $v'$ of each electronic excited state $h$ (see also fig.~\ref{fig:FC}). Due to the nature of the FC-integral running over the product of two state functions, they represent an overlap integral $S_{0-v'}$. The states of these overlap integrals are part of two separate potential energy surfaces (PES). The intensity of an electronic and vibrational (vibronic) transition between these two PES wells is then proportionate to the square of the absolute value of the vibrational overlap integrals $\propt S_{0-v'}^2$, according to the \emph{Franck-Condon principle} \emph{and} the square of the transition moment matrix elements $\Mu_{Gm}$, as outlined above.
+
+			The equilibrium distance $\bm{R}_e$ of the generalised core coordinate $\bm{R}$ of each potential energy surface will not be strictly the same (energetically "above each other"). The rearrangement of electronic density during an electronic transition lead to different equilibrium distances. More often then not, are less bonding orbitals populated in the excited states, which will cause a shift to longer bonding distances and hence a shift to the right relative to the potential energy surface representing the groundstate (see fig.~\ref{fig:FC}). Often the FC-principle is now reduced to a \emph{vertical transition} that occur due to the slow response of the heavy cores relative to the fast electronic movement of the transition. That the cores are treated as "frozen" during the transition does not mean that the transition will take place from and to the equilibrium distances within the involved states. This is however, often misrepresented in textbooks, by a graphical depiction of a transition arrow from the centre of the zero point vibration of the groundstate vertically to the point where it would cross the excited state potential energy surface. Only the arrows length, representing the resonance energy of the transition, has a physical meaning, not its vibrational destination state. A different way to view a vertical transition would be to look at the square of the absolute value of the vibrational eigenstates as probability densities for the spatial arrangement of the cores during vibrations. At a specific time when the transition will take place, the core positions, no matter where they are according to their spatial probability and the electronic wavefunctions adapted according to their core coordinate dependency, will be "frozen" and the transition will take place. However, the signs of the vibrational eigenstates are not considered in the above mentioned classical, or semi-classical interpretations. Hence, the most likely electronic transition will be where the overlap of the vibrational eigenstates of the involved electronic states is maximal. This represents the vertical transition. Again, transition probability is proportionate to the intensity of a transition (as derived from the transition moment). In a quantum mechanical oscillator, either harmonic or anharmonic, the vibrational amplitude will increase from the centre to the PES boundaries, were it will be maximal. The resulting different vibrational transitions will have an intensity depending on were the groundstates $\bm{R}_e$ lays with respect to the vibrational maxima energetically reachable according to the resonance condition. Hence, observed electronic transitions will have a vibrational finestructure, referred to as \emph{vibrational propagations}. If the excited states potential energy surface is shifted to the right on the generalised core coordinate axis compared to the groundstate well, higher vibrational $v'$ states will be populated. And \textit{vice versa}, only small geometric changes in the excited state compared to the groundstate, causing the potential energy surface shift, will lead to strong $0-0'$ transitions. Higher vibronic transitions will have a higher resonance energy compared to $\Delta E_{0-0'}$.   
+  
+			Even at \qty{0}{\K}, some energy is left in a molecule, the zero point energy. Hence, the zero point vibration $\chi_0$ of the electronic groundstate $\psi_G$ will be the initial state for a transition. Whereas the energy difference between the zero point energies of the two states $G$ and $h$ ($\Delta E_{0-0'} $) is the adiabatic energy. The vertical transition energy will be larger then the adiabatic by the \emph{rearrangement energy}. The vibrational relaxation from a higher vibrational state of the electronically excited state will lead to a redistribution of the core coordinates. Depending on the final state being stable, such as the zero point energy, or unstable, the potential forming a monotone descenting slope, a resting state is reached, or a chemical reaction is triggered. The latter being defined as a redistribution of cores and electron density.
+			%make a comment how this relates to the emissive rate 
+
+			\begin{figure}[h]
+				\centering
+				\label{fig:FC}
+				\includegraphics[scale=1]{./intro/FC.png}
+				\caption{Franck-Condon ...}
+			\end{figure}
+
+			\paragraph{Stokes Shift}
+			Above, it is described how the Franck-Condon principle affects the shape of an absorption. Specifically, how the population of multiple vibrational excited states lead to the typical higher energetic vibrational finestructure. After internal conversion, a luminescent transition may occur from the lowest vibrational level of the electronic excited state to any (higher) vibrational excited states of the electronic groundstate, with intensities according to the integrand $|\langle\chi_0|\chi_{v'}\rangle|^2$. Around the $0-0'$ transition, the electronic potential energy surfaces are with high certainty approximately harmonic, hence, the vibrational finestructure of the emission will be mirrored to the finestructure of the absorption.  
+
+			The vibrational propagation $0-0'$ band may not be at the same wavelength for the absorption and emission. The energetic difference is called the \emph{Stokes shift}. Often, some electron density is transferred from one side of the molecule in the groundstate to another in the excited state, leaving a net increase in polarity. In polar solvents such excited states of higher polarity will experience an additional stabilisation that is not present in the groundstate, the $0-0'$ band of the emission will appear at longer wavelength.  
+
+			\subsubsection{Energy Gap Law}
+			So far, the presented approximations were crucial to describe contributions of spin, electric dipole and vibrational sublevels to the transition probability, the intensity of a radiative vibronic transition. Within the BO-approximation, the potential energy surfaces of each electronic state represent impenetrable walls according to quantum mechanical theory. Non-radiative iso-energetic transitions between potential energy surfaces (PES) should therefore not be possible. In practise, however, intersystem crossing and internal conversion are indeed observed. 
+				
+				\paragraph{IC and ISC rate} constants are empirically found to roughly decrease exponentially with the energy difference $\Delta E_{if}$ between the initial $i$ and the  final $f$ state, \textit{e.g.} the $S_1$ and the $S_0$ state for an IC and $S_1$ and $T_1$ state for an ISC. Usually IC will be faster then ISC, as indicated in fig.~\ref{fig:jablonski}. This is the \emph{energy gap law}.
+
+				For a non-radiative transition between two separate PES to occur, the two involved vibrational states $\chi_{i,0}, \chi_{f,v'}$ need to overlap. Now two separate effects come into play. For a large $\Delta E_{if}$, the density of vibrational states increases. A constructive overlap of the zero point vibration of the initial state and some vibrational mode of the final state should hence be more likely. However, the larger effect of a decreasing overlap between the initial and final vibrational state dominates the transition probability. In other words, the FC-integrals $\langle \chi_{i,0}|\chi_{f,v'}$ decreases with an increasing energy gap $\Delta E_{if}$. As depicted in fig.~\ref{fig:egap}, does the very high laying vibrational modes of the final state have a small amplitude in the centre with most of the vibrational amplitude being around the PES wall. 
+
+				\begin{figure}[h]
+					\centering
+					\label{fig:egap}
+					\includegraphics[scale=1]{./intro/egap.png}
+					\caption{\textbf{\sffamily A}} Frank-Condon integrals $\langle \chi_{i,0}|\chi_{f,v'}$ are small for a large energy gap between the initial and final state. In some what rigid chromophores does the initial state overlap with roughly the centre of the final state, where a high laying vibrational mode has only a very small amplitude. \textbf{\sffamily B}} increasing density of states with increasing energy gap.}
+				\end{figure}
+
+				An increase of $k_{IC}$ with decreasing $\Delta E$ has consequences for an overall luminescent quantum yield, particularly in the red part of the visible spectrum. For small energy gaps between a groundstate and first electronic excited state, being it the $S_1$, or $T_1$ state, IC kinetics may outcompete fluorescence and particularly phosphorescence ($k_{IC} > k_{fl} > k_{ph}$). Small atoms, specifically \ce{H},  have large energetic spacings between the fundamental and the first overtone normal modes. Due to the small mass compared to the heavy atom, \ce{H} may be bound to, the reduced mass $\overline{m_{ij}}$ between atom $i$ and $j$ in eq.~\ref{eq:vib} gets minimal and by that the energy difference between their normal modes maximal, because the bonds spring constant $k$ remains constant.
+
+				\begin{equation}
+					\label{eq:vib}
+					\Delta E_v = h\nu = \hbar\sqrt{\frac{k}{\overline{m_{ij}}}}
+				\end{equation}
+
+				Even for larger energy gaps, small atoms bound to heavier atoms will have normal modes with a relatively low vibrational quantum number $v$ with the same, or similar, energy then the zero point energy of the initial state. This leads to a substantial amplitude of the final state normal mode, even at the centre of the PES where the zero point mode of the initial state may strongly overlap. Protons in positions where the chromophores excited state has substantial electron density, are detrimental to luminescent lifetimes. Even a substitution to the only double as heavy deuterium, may prolong the lifetime. %heinze zitieren. 
+				It is therefore of uttermost importance to identify loss channels related to IC due to the energy gap law, to increase (short) luminescent lifetimes in red light emitters. In certain key positions a change of the steric group from \ce{\Me} to \ce{\tBu} may increase luminescent quantum yields, or even enable luminescence at all. % laura zitieren
+				
+				The energy gap law does not only affect IC, but also ISC. Here, however, it has counter-intuitive consequences. It could be expected, that a larger energy gap will harbour a larger driving force and hence, increase the ISC rate. Due to the same reasons outlined above for IC, a small energy gap between an initial and a final state lead to a faster spin-flip. It is therefore important to understand and to control the singlet-triplet gap. This will be explained in the section~\ref{sec:nature}, where also other effects related to the singlet-triplet gap of organic chromophores are discussed.
+
+				\paragraph{Kasha's Rule} states that luminescence will always only occur from the lowest state of each multiplicity. Subsequent the absorption of a photon, a chromophore is excited into a vibronic state. Vibrational relaxation will be the fastest process, bringing every excited state first to its zero point energy. A (radiative) transition from a higher laying electronically excited state ($S_{\geq 2}$, for instance) will now have very slow rates according to the energy gap law. Between the potential energy surfaces of higher electronically excited states, the energy gap will in most cases be much small compared to the groundstate first excited state gap. Hence, non-radiative relaxations to lower laying PES with, or without retention of spin multiplicity, will be the fastest process. Only in the lowest excited state of each spin multiplicity, radiative decay become competitive with non-radiative processes. First when a $S_1 - S_2$ energy gap become sufficiently large, a radiative decay from $S_2$ to the groundstate becomes competitive with IC to $S_1$. In azulene this is the case and it is one of a few examples to violate Kasha's rule.
+				Another exception may be complexes of lanthanides. Here, the f-orbitals have equi energetic gaps leading to multi photon absorption of the same wavelangth to "pump" the chromophores to higher laying states, sometimes as high as $S_5$. Although, only with a rapidly decreasing luminescent quantum yield with excitation hight, the higher states will be emissive. Such lanthanide based systems have been proposed for photon-upconversion schemes, where several low energetic photons will be converted to a single high energy photon. %cite oliver 
+
+			\subsubsection{Fermi's Golden Rule}
+			The origin of the energy gap law may be reformulated as such: The energetic contribution to the overall energy from the vibrational term is for certain cases so large, it becomes the same order of magnitude then the electronic term. By that the movement of the electrons and the atomic cores can not be treated independently any more, they have become "coupled". Additionally, as the atomic cores gets heavier, the kinetic energy of the "circulating" electrons increases. This correlates to an increasing angular momentum that eventually becomes large enough to have an influence on the electron spin in form of a magnetic interaction. While the BO approximation collapses and an internal magnetic field emerges, both assumptions - the feasibility of separating the electron and core movement and the absence of a magnetic field - serve well as zeroth order approximations. To a BO-ansatz, the interaction between electronic and vibrational levels are added as \emph{vibronic coupling} and the internal magnetic field as \emph{spin-orbit coupling} (SOC) and \emph{hyperfine coupling} (HFC) in a perturbation ansatz. Without going into detail of the exact nature of these perturbation operators, it is noted that the perturbation alters the zeroth order wavefunction $\Psi^0$ with the perturbational correction $\Psi^1 + \Psi^2 + \cdots$. Within benzene, for instance, delocalised $\pi$ orbitals may upon \ce{C-H} out-of-plane vibration become more \ce{sp^{$n$}} hybridised in character and hence, the formerly pure $\pi-\pi^{\ast}$ transition may get contributions from a $\pi-\sigma^{\ast}$ transition. The observed kinetic rate constant $k_{if}$ for any transition from the initial state $i$ to the final state $f$ is then calculated from \emph{Fermi's golden rule}:
+
+			\begin{equation}
+				\label{eq:Fermi}
+				k_{if} = \frac{2\pi}{\hbar} V_{if}^2 \rho_f 
+			\end{equation} 
+
+			The matrix elements $V_{if}$ are the expectation values of the zeroth order orbitals of the initial and the final state and the respective perturbation operator $\hat{V}$ for the considered interactions $V_{if} = \langle \psi_i^0|\hat{V}|\psi_f^0 \rangle$. The separation ansatz outlined in eq.~\ref{eq:multRule} and eq.~\ref{eq:FC} still holds true. Therefore, the IC rate constant $k_{IC}$ is proportionate to the square of the vibrational Franck-Condon integral $\langle \psi_i|\psi_f \rangle^2$ weighted by the density of (vibrational) states of the final state $\rho_f$, rephrasing the Franck-Condon principle based on the density of states. 
+
+			As discussed in section~\ref{sec:sym}, centro symmetric metal complexes need to have a change in parity between the states involved in the transition for it to be allowed. The d-orbitals of the metal centre, being five fold degenerated in a spherical ligand field, split up in an octahedral ligand field into two states of \ce{t2_g} and \ce{e_g}, respectively. Transitions between these two states of "g" parity are Laport forbidden. The vibrational coupling perturbates the symmetry of the electronic states so that the d-d transitions in $O_h$ symmetry will become slightly symmetry allowed.
+			%for pertubation theory, energy of state density plus explanation ... 
+
+			ISC rates are as well calculated from Fermi's golden rule. Spin orbit coupling needs to be explicitly added to the perturbation operator $\hat{V}$, so that the matrix elements $V{if}$ will not vanish for a transition between two states of different multiplicity. Two additional terms are usually added to the perturbation ansatz for para magnetic molecules --- the interaction of two electron spins sufficiently well separated, the \emph{hyperfine splitting} HF, and the interaction of an electron spin with a core spin, the \emph{zero field splitting} ZF (present also without an outer magnetic field, from electron paramagnetic resonance, were outer magnetic fields are applied to investigate paramagnetic spin centres in molecules). The latter terms are only mentioned for the sake of completeness, they will not be discussed any further here. How much angular momentum is coupled into the spin momentum by perturbation, is depend again on the density of states of the final state $\rho_f$ and a spin-orbit coupling constant $\zeta$ for a single electron. The quantum mechanical considerations are hidden within the SOC constant, so that the SOC splitting within transition metal complexes is given by $hc\zeta$. To compare the interaction of SOC in different metals, the single electron parameter $\zeta$ is very useful. Table~\ref{tab:socParam} gives these values for free ions of the 3d metals in \qty{\per\cm}. To put the values into perspective, typical values for a octahedral ligand field splitting parameter $\Delta_{oct}$ may lay around \qtyrange{10000}{25000}{\per\cm}. 
+
+			\begin{table}[!h]
+			\label{tab:socParam}
+			\caption{Single electron spin orbit coupling parameter $\zeta$ for some free transition metal ions.}
+			\begin{tabular}{%
+				@{}lllll@{}
+				}\toprule
+				\textbf{Ion} & $\zeta_{3d}/\qty{\per\cm}$ & \textbf{Ion} & $\zeta_{4d}/\qty{\per\cm}$ & \textbf{\# of d-electrons} \\ \midrule
+				\ce{Ti^{3+}} & 154 & \ce{Zr^{3+}} &  500 & 1 \\
+				\ce{ V^{3+}} & 217 & \ce{Nb^{3+}} &  800 & 2 \\
+				\ce{Cr^{3+}} & 275 & \ce{Mo^{3+}} &  800 & 3 \\
+				\ce{Mn^{3+}} & 352 & \ce{Ru^{4+}} & 1600 & 4 \\
+				\ce{Fe^{3+}} & 440 & \ce{Ru^{3+}} & 1250 & 5 \\
+				\ce{Co^{3+}} & 500 & --- 		  & ---  & 6 \\	
+				\ce{Co^{2+}} & 530 & ---		  & ---  & 7 \\
+				\ce{Ni^{2+}} & 630 & \ce{Pd^{2+}} & 1600 & 8 \\
+				\ce{Cu^{2+}} & 829 & \ce{Ag^{2+}} & 1843 & 9 \\ \bottomrule
+			\end{tabular}
+			\end{table}
+
+			From tab.~\ref{tab:socParam} it becomes evident that the SOC interaction is small for early first-row transition metals in low oxidation states and increases towards late transition metals in later periods in higher oxidation states. The effect of an increasing spin-orbit coupling with roughly the rising atomic number, is called the \emph{heavy atom effect}. It is however, not limited to transition metals, it can be as well observed in main group elements, where iodine will have a significant effect on triplet luminescent quantum yields of BoDiPy, for instance.%citation.
+			The heavy atom effect can also be induced by a solvent containing heavy halogens, or other heavy atoms. Due to the availability of solvents such as di-iodo-ethane, or di-iodo-methylene, these have been employed for an external heavy atom effect. In all cases, the heavy atom need to be close to and share some of the electron density partaking in the transition.%citation
+
+			\subsubsection{El-Sayed Rule}
+			Organic chromophores do not contain heavy atoms to induce a SOC, enabling ISC and phosphorescence. In some cases, prominently carbonyls, ISC is as well observed. Angular momentum is induced by a change in orbital type during ISC to make up for the change in spin multiplicity. It is said, that the perturbation with angular momentum "rotates" an orbital, so that the spin can flip, without violating the conservation of angular momentum.
+
+			\begin{scheme}[h]
+				\ce{^1\pi,\pi^{\ast} <->[ ISC ] ^3n,\pi^{\ast}} \\
+				\ce{^3\pi,\pi^{\ast} <->[ ISC ] ^1n,\pi^{\ast}}
+				\caption{Fast intersystem crossings, according to El-Sayd's rule.}
+			\end{scheme}
+
+			``The rate of intersystem crossing is relatively large if the radiationless transition involves a change of orbital type'' \\--- Mostafa El-Sayed%cite
+			
+			Sulphur containing aromatics may also comply with El-Sayds rule. Several dyes containing sulphur motives are known. Among them the phenothiazine derivative methylene blue and (poly-) thiophene as well as aromatic thiol ethers have attracted considerable interest. It was shown, that the oxidation of the sulphur atom prolongs the triplet lifetime considerably. Particularly in a phenothiazine derivative, (see fig.~\ref{fig:thiazine}) the oxidation lead to $19 \times$ longer phosphorescence lifetime from $\tau = \qty{24}{\ms}$ to $\qty{455}{\ms}$. The authors contribute this effect to a strong decrease of \ce{n,\pi^{\ast}} character of the $T_1$ state in the oxidised variant, where the sulphurs lone pairs are "protected". As the authors did not comment on the ISC yield of their investigated compounds, it is hard to differentiate between effects arising from a potential heavy atom effect and the change in orbital character in the exited triplet state. Others have found a reduction in SOC by oxidising the thiol ether bridge of a di-anthracene-thiol (\ce{An-S-An}) and by that an essentially shutdown of electronic coupling between the two anthracene moieties. Although it is not clear what causes the effect, the literature points in the direction of a decrease of non-radiative deactivation of the triplet state by a change in orbital character in the oxidised form. So, what is beneficial for a fast ISC according to the El Said rule, may in fact also lead to non-radiative decay pathways in aromatic sulphur compounds, caused by the sulphurs lone pairs.%cite 10.1002/anie.201901546 and Wolf 2013
+			In the \ce{S}-oxidised phenothiazine chromophores a benzophenone moiety may be deemed responsible for a possible ISC, following El-Sayds rule. An internal electron density reorganisation (charge transfer, see chapter~\ref{sec:nature}) following the spin flip, leads to a stronger depletion of electron density from the carbonyl, the potential culprit in a lifetime reduction, towards the \ce{SO2} moiety. The latter, not harbouring sulfur lone pairs any more, will now not be able to enable a spin flip \textit{via} $n-\pi^{\ast}$ interactions. This reasoning may be derived from the NTO calculations presented by the authors.
+
+
+		\subsection{Transfere Processes}
+		For light to trigger a chemical transformation, a photon needs to be absorbed first, according to the \emph{Grotthus-Draper law}. Hence, only when light fulfilling the resonance condition is used and the requirements of all selection rules are met by the chromophore, any net change --- physically, or chemically --- may be observed in the chromophore. Most organic substrates being colourless (or "white", if light is scattered efficiently), will not absorb light in the visible or near UV range. First at wavelength between \qtyrange{180}{230}{\nm} $\sigma\sigma^{\ast}$ transitions  will occur. With such high corresponding photonic energy administered to the substrate, bond-dissociations will not necessarily be selective. Radicals created by homolytic bond cleavage may trigger a sequence of reactions with unforeseen outcomes. Molecular organic photochemistry has therefore been limited to a few types of (important) substrates and (successful) reactions. Carbonyls, aromatic compounds, olefins and acetylenes have been transformed by Norrish-type reactions, rearrangements, $cis/trans-$isomerisations and electro-cyclisation reactions, for instance. While these reactions are all irreplaceable tools to a synthetic organic chemist, molecular photochemistry remained for the longest time a niche research topic only established amongst a few adepts. To harness the increased reactivity of excited states in chromophores, they may be introduced as light antennas, similarly to the chlorophyll and other chromophores as the light harvesting complex (LHC) in the photosystem of photosyntheses. A chromophore will absorb a photon and transfer the excited state "reactivity" to a substrate not absorbing at the wavelength range in question and by that returning to its groundstate, renewing the photo catalytic circle. A chromophore introduced to a system to change the absorptive window, is termed a \emph{sensitiser} and a reaction triggered by the absorption of a photon and subsequent "reactivity" transfer from such a sensitiser, a \emph{sensitised} reaction. To transfer the "reactivity" of an excited state to a substrate, a sensitiser may transfer its excited state energy by various mechanisms in an \emph{energy transfer} (see section~\ref{sec:eTrans}). A sensitiser in its excited state exchanging electrons with the substrate, \textit{i.e.} catalysing a redoxreaction, in a \emph{photoredox catalysis}. While the concept of photo sensitisation was already known, it received first a broader attention after MacMillans seminal publication in 2008 where his post-doc Nicewicz used \ce{Ru(bpy)^{2+}_3} (\ce{bpy} = 2,2′-bipyridine) as a sensitiser together with an organic catalyst for an asymmetric \ce{C-C} coupling in \ce{\alpha} position to an aldehyde over a sequence of two \emph{single electron transfer} processes. %DOI: 10.1126/science.1161976
+		Since then a plethora of photoredox catalysis research have been conducted, evidenced by the corresponding publication output (selected reviews) %reviews cite
+		Employing transition metal complexes as sensitiser chromophores facilitates two major advantages. Firstly, may transition metals readily change their oxidation state, also taken advantage of in (groundstate) catalysis, either homogeneously or heterogeneously. Secondly, triplet states may be easily accessed. Organic substrates with close to no spin orbit coupling will not be able to generate triplets themself. If transferred from a sensitiser to a substrate, the triplet states may due to the absence of SOC in the organic substrate even be long lived and the energy will be several orders of magnitude longer available to a potential subsequent reaction, or a photophysical process as triplet-triplet annihilation then a singlet state. Singlet lifetimes of organic compounds are of a few nano-seconds, whereas triplet state lifetimes range around hundreds of micro-seconds.
+
+			%importance to sensitised reactions etc
+			\subsubsection{Energy Transfer}
+			\label{sec:eTrans}
+			In an energy transfer (ET), an energy donor \ce{D} transfers its excitation energy to an acceptor \ce{A} following the reaction
+
+			\begin{equation}
+				\ce{D^{\ast} + A ->[ET] D + A^{\ast}}
+			\end{equation}
+
+			Usually are VR and IC processes much faster then the transfer process so that only energy transfer from the lowest singlet or triplet states are considered. The transfer process itself is then \textit{iso}energetic, followed by relaxation processes on the acceptor. The donor/acceptor pair are usually selected so that the they each absorb at different wavelength.
+
+			\paragraph{Trivial energy transfer}, or luminescent energy transfer, is the process called where the donor emits light that is reabsorbed by the acceptor. Sometimes is a blackbody radiator, such as the sun, seen as the donor transferring its energy to the photosystems I/II in natural photosynthesis, or a lamp in a photoreactor transferring energy to the investigated substrate. From these examples can already be seen that the distance between the donor and acceptor does not play a role relevant to chemistry, where distances in the range of \unit{nm}s are considered. Additionally, there is no direct contact, so the luminescent lifetime of the donor is not affected --- the spontaneous emission of the donor governs the time frame for the luminescent energy transfer. For a transfer to occur, the donors emission spectrum need to overlap with the acceptors absorption spectrum. The overlapping region of these two spectra are called the \ce{spectral overlap integral} $J_{da}$. Such luminescent ET processes from a molecular donor to the substrate should be avoided and usually renders sensitised photo reactions unnecessary, as a direct light source, such as a laser, or an LED may be used. Only in a few circumstances, were a direct contact between a donor and an acceptor is impractical to achieve, this trivial mechanism serves as a fallback. %see 'blue lamp' in red-blue UC.
+
+			\begin{figure}[h]
+				\centering
+				\label{fig:ET}
+				\includegraphics[scale=1]{./intro/ET.png}
+				\caption{Depiction of an energy transfer \textit{via} a vertical \textbf{\sffamily A}} Förster  \textbf{\sffamily B}} a horizontal Dexter mechanism.}
+			\end{figure}
+
+			\paragraph{Förster Resonance Energy Transfer} was originally called \emph{Fluorescence Resonance Energy Transfer}. As this is a nonradiative (non-fluorescent), \textit{i.e.} resonant, energy transfer, the 'F' in the standing abbreviation FRET was later replaced with 'Förster', as he delivered the quantitative quantum mechanical explanation.%original papers -see Wirz
+			As explained earlier, a chromophore needs a permanent dipole in the groundstate to be able to absorb light. This dipole moment of a donor chromophore may interact with the dipole moment of an acceptor substrate. As the dipole moment changes during a transition, also the overall momentum need to be conserved in the dipole coupled \ce{D^{\ast}A} pair. Hence, will the change in dipole moment during the transition from an excited state to the groundstate of the donor 'induce' a dipole change in the acceptor, resulting in an excited state on the acceptor molecule. This may be viewed as a vertical ET, as the transition of an electron to a higher MO on the acceptor induces a transition to the groundstate on the excited donor. Such a FRET may only occur if the excitation energy of the donor is similar, or greater then the excitation energy of the acceptor $\Delta E_d \geq \Delta E_a$. If this condition is not fulfilled, the energy from the donors first excited state will only be transferred to higher vibrational states of the acceptors groundstate. Hence, the energy will dissipate in heat during VR. This is a typical case for solvent quenching of a chromophores excited state and should be avoided as much as possible. 
+
+			The kinetic for a Förster type energy transfer follows again the golden rule:
+
+			\begin{equation}
+				  V_{da}^2 \sim k_{FRET} = \frac{R^6_0}{R^6\tau^0_d}
+			\end{equation}
+
+			where $V_{da}$ are the matrix elements of the perturbation operator $\hat{V}_{da}$ coupling the donors and the acceptors electronic state. $R$ is the momentary distance between donor and acceptor with $R_0$ being the \emph{critical distance} where transfer probability is equal to spontaneous decay, so that $R_0 = R$. $\tau^0_d$ is the singlet excited state lifetime of the donor in absence of the acceptor. 
+
+			The critical distance $R_0$ is as a measure for the efficiency of ET and dependent on the spectral overlap $J_{da}$ (not the same as within radiative energy transfer). The interaction between dipoles are dependent on their orientation towards each other. This is taken into account with the \emph{orientation factor} $\kappa$ within FRET. Notably is $R_0$ also dependent on the fluorescent quantum yield of the donor in absence of the acceptor $\Phi^0_d$. $\rho$ denotes the average refraction index of the investigated mixture. 
+
+			\begin{equation}
+				\label{eq:R0_FRET}
+				R^6_0 = \frac{9\ln(10)\kappa^2\Phi^0_d}{128\pi^5 N_A\rho^4}\cdot J_{da}
+			\end{equation}
+
+			The distance dependency outlined in eq.~\ref{eq:R0_FRET} is observed to be very consistent. So it is possible to use the steady-state fluorescence intensity of the donor in the presence $I^a$ and absence $I^0$ of the acceptor under else strictly the same conditions as a \emph{molecular ruler} to measure distances $R$ between a donor/acceptor pair used as fluorescence markers in fluorescence spectroscopy and microscopy.
+
+			\begin{equation}
+				R = R_0 \left(\frac{I^a}{I^0}\right)^{\frac{1}{6}}
+			\end{equation}
+
+			The quantities $k_{FRET}$ and $R_0$ will also depend on the acceptor concentration.
+
+			In solids, or otherwise organised systems, as in the protein cluster of photosystem I/II, the number of donors $N_d$ and acceptors $N_a$ each of them will 'see' will exceed one. The donors and acceptors will not interact pair wise as is the case for  diffusion controlled encounters in solutions. These non-pair wise interactions may be viewed as more delocalised electronic interactions that lead to faster transfer processes. Such \emph{exciton hopping} is the main mechanism of energy transfer within semiconductors, but also in other organised systems.
+
+			\subsubsection{Electron Transfer}
+
+			\subsubsection{Kinetics of Transfer Processes}
+			%solvent cage
+	
+	\section{Nature of the Excited State}	
+	\label{sec:nature}	 
+
+
+
+	\section{Probing the Mechanism} 
+
+	
+	%quantum-yield: inner filter effect
+	%kinetic of tta: measure spin-statistical factor
+	\label{sec:mechanism}
+			
+
+\chapter{Isocyanide Complexes}
+
+\chapter{Sensitised Triplet-Triplet Annihilation Photon Upconversion}

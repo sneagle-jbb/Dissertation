@@ -4,6 +4,8 @@
 \usepackage{scrlayer-scrpage}
 \usepackage{scrhack}
 \usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{bm}
 \usepackage{unicode-math}
 \usepackage[autostyle=true]{csquotes}
 \usepackage[backend=biber, style=chem-acs, natbib=true, sortlocale=en-GB,]{biblatex}
@@ -19,6 +21,7 @@
 \usepackage[]{subfig}
 \usepackage{wrapfig}
 \usepackage{caption}
+\usepackage[export]{adjustbox}
 %\usepackage{showframe}
 %\usepackage{layout}
 
@@ -34,16 +37,16 @@
 \setsansfont[   
 				WordSpace=1.2, 
                 Scale=MatchLowercase, 
-                %LetterSpace=5.0,
-                UprightFont = * Light,
-                BoldFont = * Medium,
-                ItalicFont = * Light Oblique,
-                BoldItalicFont = * Medium Oblique,
-                ]{Futura Std}%
+                LetterSpace=5.0,
+                UprightFont = * Regular,
+                BoldFont = * Semibold,
+                ItalicFont = * Condensed Italic,
+                BoldItalicFont = * Semibold Italic,
+                ]{Myriad Pro}%
 \setmonofont[
 				Scale=MatchLowercase,
 				FakeStretch=0.9,
-				]{Roboto Mono}%
+				]{Fira Code}%
 \setmathrm[     
 				Scale=MatchLowercase,
                 ]{Palatino Linotype}%
@@ -76,6 +79,9 @@
 
 %--- P A T H   T O   B I B L I O G R A P H Y ---%
 \addbibresource{./lit.bib}
+
+%--- P A T H   T O   G R A P H I C S ---%
+\graphicspath{./gfx}
 
 %--- M I S C . ---%
 \sisetup{detect-all}

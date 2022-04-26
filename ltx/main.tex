@@ -18,11 +18,11 @@
 
 
 %--- T I T L E ---%
-\subject{Research Project}
-\title{Electronic Effects at Bridge Substitution}
-\subtitle{Molybdenum Isocyanides}
+\subject{Inaugural Dissertation}
+\title{sTTA PUC}
+\subtitle{altering triplet states}
 \author{Jakob B. Bilger}
-\date{last updated: \today}
+\date{Basel, \today}
 \publishers{
 		\rule{.3\textwidth}{0.4pt}\\
       		\vspace{1.4em}
@@ -30,9 +30,12 @@
       		\vspace{0em} 
 		\rule{.3\textwidth}{0.4pt}\vfill
 }
+\extratitle{Schmutztitel}
+\dedication{Wiedmung}
+
 
 %--- I N C L U D E ---%
-\includeonly{experimental}
+%\includeonly{experimental}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -45,11 +48,38 @@
 
 \begin{document}
 \maketitle
+\cleardoublepage
+\pagenumbering{roman}
+\part(Preface)
+\include{thanks}
+\tableofcontents
+\include{abbr}
+\include{preface}
 
+%------------------------------
+\pagenumbering{arabic}
+\part(Introduction)
+\include{intro}
 
-%\include{introduction}
-%\layout
+\part(Projects)
+\include{MoTh}
 
-\include{experimental}
+\include{MoThexp}
 
+\include{Bridge}
+
+\include{Bridgeexp}
+
+\include{DArBF}
+
+\include{DArBFexp}
+
+\include{addProjects}
+
+%------------------------------
+\part{Appendix}
+\appendix
+\include{appendix}
+
+\printbibliography
 \end{document}
