@@ -1,4 +1,4 @@
-\chapter{Introduction}
+\chapter{Theoretical Background}
 	\section{Counting Light}
 	\paragraph{Light as a source of energy} for chemical transformations has an energy content by itself. According to Max Planck and Albert Einstein the energy of light $E_l$ is proportional to its \emph{frequency} ($\nu$) with the \emph{Planck constant} ($h$, "\emph{action quantum}") as the proportional factor, the smallest action possible in nature (see eq. \ref{eq:planck1}). 
 
@@ -18,14 +18,14 @@
 
 	\begin{equation}%
 		\label{eq:planck2}
-		E_l = hc\cdot\sfrac{1}{\lambda}
+		E_\mathrm{l} = hc\cdot\sfrac{1}{\lambda}
 	\end{equation}
 
 	Or, if the \emph{angular frequency} $\omega = 2\pi\nu$ is used
 
 	\begin{equation}%
 		\label{eq:planck3}
-		E_l = \hbar\omega
+		E_\mathrm{l} = \hbar\omega
 	\end{equation}	 
 
 	In spectroscopy $\sfrac{1}{\lambda}$ from eq. \ref{eq:planck2} is often replaced by \emph{wavenumber} ($\tilde{\nu}$/\unit{\per\cm}). By doing so, the obtained spectrums x-axis scales proportionate to energy. Particularly for IR, but also for UV/Vis spectroscopy (see fig. \ref{fig:elSpc} for respective energy intervals), using the unit \unit{\per\cm} gives easy to use numeric values. To take the higher energy of visible and UV-light compared to IR-light into account, the handy unit "kilo Kayser" (\unit{kK}, \qty{1}{kK} = \qty{1000}{\per\cm}) were used in older times. For the UV/Vis range, numeric values may hence be given as \qty{16-25}{kK}.
@@ -60,7 +60,7 @@
 		\caption{Triangle as a memorisation help for the rule of proportion of energy units relevant to photochemistry and photophysics. The horizontal bar is read as a division sign and the vertical bar as a multiplication sign between the two known quantities and the third being the one quantity wanted.}
 	\end{figure}
 
-	\paragraph{The wave/particle dualism of light} states that the nature of light emerge as either a wave or as a particle, depending on the experiment. Einstein was awarded the Nobel prise in 1921 for "his discovery of the law of the photoelectric effect", were he introduced a "light quantum", a particle Einstein referred to as a \emph{photon}. In short, this \emph{photoelectric effect} describes a phenomenon were light exceeding a certain frequency hitting a material dislodges electrons from its surface. Hallwachs discovered this effect in 1888, while Lenard in 1902 published an investigation on the intensity of the \emph{photocurrent} dependent on the frequency and \emph{intensity} of incident light. Lightintensity $I_l$ is defined as its \emph{power} (energy per time, $P_l = \sfrac{E_l}{t}$) hitting a specific surface area $A$ , i.e. a power density ($I_l = \sfrac{P_l}{A}$), with the unit \unit{\W\per\square\cm}. In figure \ref{fig:photocurrent} a schematic of the apparatus used by Hallwachs is depicted to the left (A) and to the right (B) one used by Lenard to measure the photocurrent. In the latter a variable counter voltage $U$ can be applied. The electrons dislodged by incident light from the metal electrode $K$ can only reach the counter electrode if their kinetic energy $\epsilon_kin = \sfrac{1}{2} m_ev^2$ surpasses the counter voltage, or
+	\paragraph{The wave/particle dualism of light} states that the nature of light emerge as either a wave or as a particle, depending on the experiment. Einstein was awarded the Nobel prise in 1921 for "his discovery of the law of the photoelectric effect", were he introduced a "light quantum", a particle Einstein referred to as a \emph{photon}. In short, this \emph{photoelectric effect} describes a phenomenon were light exceeding a certain frequency hitting a material dislodges electrons from its surface. Hallwachs discovered this effect in 1888, while Lenard in 1902 published an investigation on the intensity of the \emph{photocurrent} dependent on the frequency and \emph{intensity} of incident light. Lightintensity $I_\mathrm{l}$ is defined as its \emph{power} (energy per time, $P_\mathrm{l} = \sfrac{E_\mathrm{l}}{t}$) hitting a specific surface area $A$ , \textit{i.e.} a power density ($I_\mathrm{l} = \sfrac{P_\mathrm{l}}{A}$), with the unit \unit{\W\per\square\cm}. In figure \ref{fig:photocurrent} a schematic of the apparatus used by Hallwachs is depicted to the left (A) and to the right (B) one used by Lenard to measure the photocurrent. In the latter a variable counter voltage $U$ can be applied. The electrons dislodged by incident light from the metal electrode $K$ can only reach the counter electrode if their kinetic energy $\epsilon_kin = \sfrac{1}{2} m_ev^2$ surpasses the counter voltage, or
 
 	\begin{equation}[h]%
 		\sfrac{1}{2}m_e\cdot v^2 > e\cdot U
@@ -78,12 +78,12 @@
 	By measuring the counter voltage $U_0$ where the photocurrent $I$ just reaches zero, the maximum kinetic energy of the photoelectrons can be determined:
 
 	\begin{equation}[h]%
-		\epsilon_{max} = \sfrac{1}{2}m_e\cdot v^2_{max} = e\cdot U_0
+		\epsilon_{max} = \sfrac{1}{2}m_e\cdot v^2_\mathrm{max} = e\cdot U_0
 	\end{equation}
 
 	Lenard found that the maximum energy of the photoelectrons is independent of the incident monochromatic light intensity, i.e. its wave vector amplitude. According to Maxwell's electromagnetic theory this finding violates the preservation of momentum, as a light wave should have a momentum proportionate to its intensity. 
 
-	Is the frequency of the incident light varied, a linear relationship with the counter voltage $U_0$ is found. If, however, the electrode metal is changed, a parallel translation of the voltage $U_0$ as a linear function of the light frequency with the same slope is found. That means an existing \emph{threshold frequency} $\nu_{th}$ at which no photocurrent is any more observed depends on the material. The slope has the dimension of an action and a numeric value identical to Planck's constant $h$. 
+	Is the frequency of the incident light varied, a linear relationship with the counter voltage $U_0$ is found. If, however, the electrode metal is changed, a parallel translation of the voltage $U_0$ as a linear function of the light frequency with the same slope is found. That means an existing \emph{threshold frequency} $\nu_\mathrm{th}$ at which no photocurrent is any more observed depends on the material. The slope has the dimension of an action and a numeric value identical to Planck's constant $h$. 
 
 	\begin{equation}[h]%
 		\label{eq:Einstein}
@@ -97,7 +97,7 @@
 
 	Besides explaining the corpuscular character of light, the photoelectric effect has also several applications in technical instrumentation. One very important application for the field of photochemistry is the \emph{photonmultiplier tube} (PMT) used in quantitative luminescence measurements (see also page ...).
 
-	Regardless of weather light may be described as a wave or with corpuscular characteristics, it accommodates chemists greatly to think of light as a stream of photons (\emph{photon flux}). Chemists are used to employ small quanta of matter -- particle number $N$ -- to balance chemical equations. In the same way photons may be thought of as reactants (scheme \ref{schm:photochem} a) ). This is crucial to probe mechanisms and will be used to form quantum yield equations. 
+	Regardless of weather light may be described as a wave or with corpuscular characteristics, it accommodates chemists greatly to think of light as a stream of photons (\emph{photon flux}, q^\mathrm{Ph}_N). Chemists are used to employ small quanta of matter -- particle number $N$ -- to balance chemical equations. In the same way photons may be thought of as reactants (scheme \ref{schm:photochem} a) ). This is crucial to probe mechanisms and will be used to form quantum yield equations. 
 
 	\begin{scheme}[h]%
 		\centering
@@ -150,11 +150,14 @@
 		\qty{1}{E} = hc\cdot\sfrac{1}{\lambda}\cdot N_A
 	\end{equation}
 
-	Often it is also useful to know how many photons are emitted by a light source. Taking advantage of the manufacturer information given on the light source about its \emph{radiant power} $P/\unit{\W}$, the number of photon may be calculated. The radiant power is the radiant energy $Q$ emitted, transferred or received at all wavelength per unit time $P = \mathrm{d}Q/\mathrm{d}t$. The \emph{intensity}, or \emph{irradiance} $I/\unit{\W\per\square\m}$ is the radiant power received on a surface, such as a cuvette in a spectroscopic measurement, or a reaction flask in a photo chemical experiment. Intensity is often used in the laboratory jargon interchangeably to radiant power, irradiance and photon flux, hence this term will be avoided from here and further on to make a clear distinction. This way the irradiance represents a \emph{power density} of incident light on a surface, the radiant power the power of light and the \emph{photon flux} $N_{Ph}$ the number of photons per area and time . Using the Planck-Einstein relation (eq. \ref{eq:planck2}) for the energy of a single photon as a function of its wavelength, the expression eq. \ref{eq:flux} is derived. Here, the photon flux is given as a function of the wavelength such that the y-axis of a spectrum represents the number of photons per unit time at the given wavelength.
+	Often it is also useful to know how many photons are emitted by a light source. Taking advantage of the manufacturer information given on the light source about its \emph{radiant power} $P/\unit{\W}$, the number of photons may be calculated. The radiant power is the radiant energy $Q$ emitted, transferred or received at all wavelength per unit time $P = \mathrm{d}Q/\mathrm{d}t$. The \emph{intensity}, or \emph{irradiance} $I/\unit{\W\per\square\m}$ is the radiant power received on a surface, such as a cuvette in a spectroscopic measurement, or a reaction flask in a photo chemical experiment. Intensity is often used in the laboratory jargon interchangeably to radiant power, irradiance and photon flux, hence this term will be avoided from here and further on to make a clear distinction. This way the irradiance represents a \emph{power density} of incident light on a surface, the radiant power, the power of light and the \emph{photon flux} $q^\mathrm{Ph}_N$ the number of photons $N$ per area and time. Using the Planck-Einstein relation (eq. \ref{eq:planck2}) for the energy of a single photon as a function of its wavelength, the expressions in eq. \ref{eq:flux} are derived. Here, the photon flux is given as a function of the wavelength such that the y-axis of a spectrum represents the number of photons per unit time at the given wavelength.
 
 	\begin{equation}
 		\label{eq:flux}
-		N_{Ph}(\lambda) = \frac{P(\lambda)/\unit{\W}\cdot t/\unit{\s}}{E_l(\lambda)/\unit{\J}}
+	\begin{split}
+		q^\mathrm{Ph}_N(\lambda) &= \frac{P(\lambda)/\unit{\W}}{E_\mathrm{l}(\lambda)/\unit{\J}} \\
+		N_\mathrm{Ph}(\lambda) &= \frac{P(\lambda)/\unit{\W}\cdot t/\unit{\s}}{E_\mathrm{l}(\lambda)/\unit{\J}}
+	\end{split}
 	\end{equation} 
 
 	There exists also a number of experimental methods to determine $N_{Ph}$ directly. This will be addressed thoroughly in section~\ref{sec:mechanism}.
@@ -176,7 +179,7 @@
 		\end{figure}
  		
 
-		Organic molecules (usually), but also many metal complexes, have a spin state of $S = 0$ as their groundstate, i.e. are in their singlet state. This was given the term $S_0$, where the subscript $> 0$ indicates an excited state, such that $S_1$ marks the first excited singlet state and so forth. States of higher spin multiplicity are depicted shifted to the right of the singlet manifold with each multiplicity in their own separate column. The incremental right shift of higher spin multiplicity states does not indicate any (possible) translation alongside an arbitrary geometric coordinate and is purely for graphical clarity. The lowest triplet state is $T_1$ as is always the triplet of the first excited state, if the groundstate is a singlet state. Excited triplet states will always be lower in energy then their singlet counterparts (see section~\ref{sec:xxx} for more details). Thick lines mark the \emph{zero point} energy of each electronically excited state with finer lines above representing vibrational excited states of each electronic (excited) state. 
+		Organic molecules (usually), but also many metal complexes, have a spin state of $S = 0$ as their groundstate, \textit{i.e.} are in their singlet state. This was given the term $S_0$, where the subscript $> 0$ indicates an excited state, such that $S_1$ marks the first excited singlet state and so forth. States of higher spin multiplicity are depicted shifted to the right of the singlet manifold with each multiplicity in their own separate column. The incremental right shift of higher spin multiplicity states does not indicate any (possible) translation alongside an arbitrary geometric coordinate and is purely for graphical clarity. The lowest triplet state is $T_1$ as is always the triplet of the first excited state, if the groundstate is a singlet state. Excited triplet states will always be lower in energy then their singlet counterparts (see section~\ref{sec:xxx} for more details). Thick lines mark the \emph{zero point} energy of each electronically excited state with finer lines above representing vibrational excited states of each electronic (excited) state. 
 
 		If a molecule absorbs a photon of suitable wavelength, virtually always an electronically together with vibrational excited states is formed. Such \emph{vibronic} (\emph{vibr}ational and elect\emph{ronic}) excited states rapidly relax into a vibrational groundstate (zeropoint energy of the respective electronically excited state) \textit{via} \emph{vibrational relaxation} (VR). This process is also referred to as \emph{thermalisation}, or \emph{vibrational cooling}. Likewise may the term \emph{hot state} be used for vibrational excited states. Heat released during this non-radiative process is absorbed by the solvation shell. The process where a higher excited state non-radiatively relaxes into a lower state of same spin multiplicity, is called \emph{internal conversion} (IC). It is important to note that this process is \textit{iso}-energetic --- the higher state relaxes from its vibrational groundstate into a lower electronic states excited vibrational state of the same energy as the original state. Within a model of potential energy surfaces for electronic states, the nature of such an \textit{iso}-energetic conversion can be easily rationalised (see section~\ref{sec:FC}). An IC is followed by a VR to the vibrational groundstate of the new electronic state. This way, most matter loses its excited state energy. From a hot $S_1$ state formed directly by excitation, a VR brings the chromophore to its vibrational groundstate, from where a IC to a hot $S_0$ state takes place and the chromophore relaxes to its vibronic groundstate \textit{via} VR. To avoid this non-radiative deactivation pathway is one of the basic design principles of a synthetic photo-chemist. Particular in (\textit{poly-})aromatic compounds fine structures are observed. If these chromophores are excited from $S_0 \to S_1$, several vibrational states of $S_1$ are excited too. The energy of these \emph{vibrational propagations} are denoted $E_{0-0}$, for a transition from $S_0$ and a vibrational eigenstate with the vibrational quantum number $v = 0$ to $S_1$ with $v = 0$ (see fig.~\ref{fig:FC} for more detail). If a sufficient heavy atom is present in the chromophore, such as a transition metal, a radiationless transition including a spin-flip is favoured rather then an IC, termed an \emph{intersystem crossing} (ISC). It is \textit{iso}energetic in the same way as ICs, where a vibrational excited triplet (or higher spin multiplicity) state is formed, prior to VR to its zeropoint energy. If a chromophore undergoes a radiative transition to its groundstate with a spin multiplicity \emph{retention}, this is termed \emph{fluorescence} (F), e.g. $S_0 \gets S_1$. If the spin multiplicity change during a radiative process, this is termed \emph{phosphorescence} (P), e.g. $S_0 \gets T_1$. This may only occur if a sufficient heavy atom is present in the chromophore.
 
@@ -190,7 +193,7 @@
 		\end{figure}
  		
  	
-		\subsection{time dependency}
+		\subsection{time dependency}%take care of k vs k_obs!
 		All photophysical processes, being time dependent, are governed by certain time domains. Each process has a specific average time range at which it occurs, often being indicative of a certain process. In fig.~\ref{fig:jablonski} is depicted the average time ranges for their respective processes. Some of the processes may out-compete each other, depending on specific properties of the chromophore in question. If a molecule is purely organic, fluorescence or internal conversion to the electronic groundstate will be favoured over inter-system crossing. This will change if heavy atoms are introduced so that ISC will be kinetically faster then fluorescence or IC. 
 
 		The rate of photophysical processes are mostly of first-order character. The decay of an excited state such as the emission of light \ce{A^{\ast} ->[k] A + $h\nu$} may be considered a conversion of a single reactant. A second-order process, the photon upconversion \textit{via} triplet-triplet annihilation, will also be discussed in this thesis. Here, two triplet states partake in a transformation yielding only a single photon. 
@@ -214,10 +217,10 @@
 
 		\begin{equation}
 		\label{eq:tau}
-			\tau = \sfrac{1}{k}
+			\tau = \sfrac{1}{k_\mathrm{obs}}
 		\end{equation}
 
-		Inserting $\tau$ for the time in eq.~\ref{eq:rate} ($k\cdot\tau = 1$) gives a ratio of the concentration of excited states remaining after the timeperiod of one lifetime to the initial concentration of excited states. In other words, one lifetime has passed when the concentration of excited states have decayed to the fraction of $\sfrac{1}{e} \sim 0.37 \sim \sfrac{2}{5}$ of its initial concentration. 
+		Inserting $\tau$ for the time in eq.~\ref{eq:rate} ($k\cdot\tau = 1$) gives a ratio of the concentration of excited states remaining after the time period of one lifetime to the initial concentration of excited states. In other words, one lifetime has passed when the concentration of excited states have decayed to the fraction of $\sfrac{1}{e} \sim 0.37 \sim \sfrac{2}{5}$ of its initial concentration. 
 
 		Analogously, a \emph{halflife} $\tau_{\frac{1}{2}}$ of an excited state is defined as the time after half of the concentration of the initial excited state concentration is decayed. A conversion factor between both lifetimes may be derived from eq.~\ref{eq:rate} as following 
 
@@ -231,20 +234,21 @@
 
 		% Missing: excitation time explanation
 
-		Assuming, the entire excited state population decays only by means of emission, the radiant rate constant corresponds to the \emph{natural} lifetime of the emissive excited state. The processes depicted in fig.~\ref{fig:jablonski} all exhibit as primary processes a natural lifetime. In non-ideal systems, different possible processes may compete with each other with one or a few processes dominating the decay pathways. The  overall rate constant may then be written as a sum of its individual rate constants from the participating processes. Kinetics of the different processes are discussed in section~\ref{sec:laws}. 
+		Assuming, the entire excited state population decays only by means of emission, the radiant rate constant corresponds to the \emph{natural} lifetime of the emissive excited state. The processes depicted in fig.~\ref{fig:jablonski} all exhibit as primary processes a natural lifetime. In non-ideal systems, different possible processes may compete with each other with one or a few processes dominating the decay pathways. The  overall observed rate constant may then be written as a sum of its individual rate constants from the participating processes. Kinetics of the different processes are discussed in section~\ref{sec:laws}. 
 
 		\begin{equation}
-			k = \sum[i]k_i
+			k_\mathrm{obs} = \sum[i]k_\mathrm{i}
 		\end{equation}
 
-		In practice it is not feasible to distinguish all present primary processes. As a first approximation, processes may be divided into non-radiative ($ k_{nr} $) and radiative ( $ k_{r}$ ) decays. In fig.~\ref{fig:jablonski}, vibrational relaxation, internal conversion and intersystem crossing are non-radiative processes, whereas fluorescence and phosphorescence are radiative. Depending on the relative rate constants, it may be possible to describe certain processes as "build-up" processes to "resting states". The very fast absorption and subsequent VR will have finished building-up the $S_1$ state before any of it may have decayed as fluorescence. Due to the long lifetimes of  %Nicht radiativ und radiativ spezifieren
+		In practice it is not feasible to distinguish all present primary processes. As a first approximation, processes may be divided into non-radiative ($ k_\mathrm{nr} $) and radiative ( $ k_\mathrm{r}$ ) decays. In fig.~\ref{fig:jablonski}, vibrational relaxation, internal conversion and intersystem crossing are non-radiative processes, whereas fluorescence and phosphorescence are radiative. Depending on the relative rate constants, it may be possible to describe certain processes as "build-up" processes to "resting states". The very fast absorption and subsequent VR will have finished building-up the \ce{S_1} state before any of it may have decayed as fluorescence. Due to the long lifetimes of  %Nicht radiativ und radiativ spezifieren
 
 		\begin{equation}
-		 k = k_r + k_{nr}
+		 k_\mathrm{obs} = k_\mathrm{r} + k_\mathrm{nr}
 		\end{equation}
 
 		\subsection{Absorption and Emission}
-			\paragraph{Absorption and Extinction:} The intensity of light passing through a cuvette containing a solution of a chromophore is weakened by the solutions \emph{absorbance} $A$. Intensity that is not absorbed, reflected or scattered may be measured as the \emph{transmittance} $T$ after the cuvette. The light path length $l$ through the cuvette is the dimension of the cuvette (usually \qty{1}{\cm} for conveniences). The differential intensity change $\mathrm{d}I$ per passed differential beam path length $\mathrm{d}l$ at any point in the cuvette is an exponential gradient proportionate to the concentration of the chromophore in the solution. The proportionality factor is the extinction coefficient.
+			\subsubsection{Absorption and Extinction} 
+			The irradiance of light passing through a cuvette containing a solution of a chromophore is weakened by the solutions \emph{absorbance} $A$. irradiance that is not absorbed, reflected or scattered may be measured as the \emph{transmittance} $T$ after the cuvette. The light path length $l$ through the cuvette is the dimension of the cuvette (usually \qty{1}{\cm} for conveniences). The differential irradiance change $\mathrm{d}I$ per passed differential beam path length $\mathrm{d}l$ at any point in the cuvette is an exponential gradient proportionate to the concentration of the chromophore in the solution. The proportionality factor is the extinction coefficient.
 
 			\begin{equation}
 			\label{eq:lambertbeer}
@@ -259,7 +263,7 @@
 			\begin{split}
 			\end{equation}
 
-			The above relationship between light intensity change and chromophore concentration and pathlength, derived in eq.~\ref{eq:lambertbeer}, was named the \emph{Lambert-Beer law} of absorbance. Here, $\epsilon^{\ast}$ is the exctinction coefficient to base $e$ and $\epsilon$ the exctinction coefficient to base 10. The latter is commonly used and will have the unit $\epsilon$/\unit{\L\per\mol\per\cm}. The quantity of the logarithmic ratio of incident light intensity $I_0$ and transmitted light intensity $I$ is the absorbance $A = \lg\sfrac{I_0}{I}$ of a chromophore solution. The ratio of transmitted light intensity $I$ and incident light intensity $I_0$ is the transmittance $T = \sfrac{I}{I_0}$. Hence, a relationship between absorbance and transmittance is given by
+			The above relationship between light irradiance change and chromophore concentration and pathlength, derived in eq.~\ref{eq:lambertbeer}, was named the \emph{Lambert-Beer law} of absorbance. Here, $\epsilon^{\ast}$ is the exctinction coefficient to base $e$ and $\epsilon$ the exctinction coefficient to base 10. The latter is commonly used and will have the unit $\epsilon$/\unit{\L\per\mol\per\cm}. The quantity of the logarithmic ratio of incident light irradiance $I_0$ and transmitted light irradiance $I$ is the absorbance $A = \lg\sfrac{I_0}{I}$ of a chromophore solution. The ratio of transmitted light irradiance $I$ and incident light irradiance $I_0$ is the transmittance $T = \sfrac{I}{I_0}$. Hence, a relationship between absorbance and transmittance is given by
  
 			\begin{equation}
 			\begin{split}
@@ -268,7 +272,7 @@
 			\end{split}
 			\end{equation}
 
-			The transmittance has the numerical values between 0 and 1. The absorbance, however, does not have a strict upper boundary; with $A = 4$ leaving practically no light intensity through. A quantity that gives an easy ratio of how much light is absorbed, scattered or reflected to the incident intensity, may be termed the absorptance $\alpha$. In table~\ref{tab:absorptance}, a quick numeric relationship between the absorbance and absorptance is given and in eq.~\ref{eq:qty} a short summary of the three important quantities in light extinction.
+			The transmittance has the numerical values between 0 and 1. The absorbance, however, does not have a strict numeric upper boundary; with $A \sim 4$ leaving practically no light irradiance through. A quantity that gives an easy ratio of how much light is absorbed, scattered or reflected to the incident irradiance, may be termed the absorptance $\alpha$. In table~\ref{tab:absorptance}, a quick numeric relationship between the absorbance and absorptance is given and in eq.~\ref{eq:qty} a short summary of the three important quantities in light extinction.
 
 			\begin{table}[h]
 			\label{tab:absorptance}
@@ -302,10 +306,10 @@
 			\end{split}
 			\end{equation} 
 
-			It is therefore necessary to work at (very) low concentrations. For instance, to be able to stay below an absorbance of 0.1, where already \qty{21}{\percent} of incident light will be absorbed, a \ce{Ru(bpy)_3^{2+}} solution would need to have a concentration of \qty{6.8e-6}{\mol\per\L}, if a \qty{450}{\nm} light source is used.
+			It is therefore necessary to work at (very) low concentrations. For instance, to be able to stay below an absorbance of 0.1, where already \qty{21}{\percent} of incident light will be absorbed, a \ce{Ru(bpy)_3^{2+}} solution would need to have a concentration of \qty{6.8e-6}{\mol\per\L}, if a \qty{452}{\nm} light source is used.
 
-			\paragraph{Emission and Luminescent Quantum Yield}
-			Regardless of the response irradiation triggers when absorbed by matter, the quantity of the outcome, the photo product, being it (non-radiative) chemical transformations or luminescence, is measured as a \emph{quantum-yield} $\Phi$. Additionally, is the power of light irradiated as a "yield" of a chemical reaction in \emph{chemo-} and \emph{bio-luminescence} given as a quantum-yield (see fig.~\ref{fig:biolum} for two examples of bio-luminescence). The power of electrons used per power of photons released in \emph{electro-luminescent} devices (LED) will also be expressed as a quantum-yield. As such a quantum-yield is the quantity in \unit{\mol} of any product formed by absorption or emission of light per quantity photons absorbed at a given wavelength, or per quantity reactant to trigger luminescence. Due to the many processes quantified by a quantum-yield, it is important to always specify which process is referred to as a suffix. In this thesis mostly luminescent quantum-yields $\Phi_{Em}$ will be considered, such as fluorescence $\Phi_{Fl}$ and phosphorescence $\Phi_{Ph}$ quantum-yields. In common will all processes discussed here, have the absorption of light as an initial trigger. In most cases the quantum-yield will be independent of the excitation wavelength for reasons discussed later (Kasha's rule, \pageref{kasha}).
+			\subsubsection{Emission and Luminescent Quantum Yield}
+			Regardless of the response irradiation triggers when absorbed by matter, the quantity of the outcome, the photo product, being it (non-radiative) chemical transformations or luminescence, is measured as a \emph{quantum-yield} $\Phi$. Additionally, is the power of light irradiated as a "yield" of a chemical reaction in \emph{chemo-} and \emph{bio-luminescence} given as a quantum-yield (see fig.~\ref{fig:biolum} for two examples of bio-luminescence). The power of electrons used per power of photons released in \emph{electro-luminescent} devices (LED) will also be expressed as a quantum-yield. As such a quantum-yield is the quantity in \unit{\mol} of any product formed by absorption or emission of light per quantity photons absorbed at a given wavelength, or per quantity reactant to trigger luminescence. Due to the many processes quantified by a quantum-yield, it is important to always specify which process is referred to as a suffix. In this thesis mostly radiative quantum-yields $\Phi_\mathrm{r}$ will be considered, such as fluorescence $\Phi_\mathrm{Fl}$ and phosphorescence $\Phi_\mathrm{Ph}$ quantum-yields. In common will all processes discussed here have the absorption of light as an initial trigger. In most cases the quantum-yield will be independent of the excitation wavelength for reasons discussed later (Kasha's rule, \pageref{kasha}).
 
 			\begin{figure}[!h]
 				\centering
@@ -314,25 +318,30 @@
 				\caption{}
 			\end{figure} 
 
-			From eq.~\ref{eq:OY} can be seen that the ratios of emitted light to absorbed light defining the quantum-yield may be measured either in light power, or more common in light intensity. These ratios will both be equal to the ratio of the total number of photons emitted $N_{Em}^{Ph}$ to photons absorbed $N_{Abs}^{Ph}$ (for a luminescent quantum-yield).
+			From eq.~\ref{eq:QY} can be seen that the ratios of emitted light to absorbed light defining the quantum-yield may be measured either in light power, or more common in light irradiance. These ratios will both be equal to the ratio of the total number of photons emitted $N_{Em}^{Ph}$ to photons absorbed $N_{Abs}^{Ph}$ (for a luminescent quantum-yield).
 
 			\begin{equation}
 				\label{eq:QY}
-		 		\Phi_{Em} = \frac{P_{Em}}{P_{Abs}} = \frac{I_{Em}}{I_{Abs}} = \frac{N_{Em}^{Ph}}{N_{Abs}^{Ph}}
+		 		\Phi_\mathrm{r} = \frac{P_\mathrm{r}}{P_\mathrm{Abs}} = \frac{I_\mathrm{r}}{I_\mathrm{Abs}} = \frac{N_\mathrm{r}^\mathrm{Ph}}{N_\mathrm{Abs}^\mathrm{Ph}}
 			\end{equation}
 
-			Likewise can the quantum-yield be interpreted kinetically. If the radiative rate is much faster then any other rate that may deactivate the luminescent state (the $S_1$ or $T_1$ state), then the radiative process will dominate the excited state relaxation. From the stand-point of a synthetic photo-chemist, a chromophore should ideally be designed to have as slow as possible non-radiative decay processes of the luminescent state. To identify the most important photo-physical processes and to determine their rate lies at the heart of photo-chemistry. From such information gathered, unfavoured deactivation pathways may be understood and informed design choices considered for a next iteration of the desired chromophore.
+			Likewise can the quantum-yield be interpreted kinetically. If the radiative rate is much faster then any other rate that may deactivate the luminescent state (the \ce{S_1} or \ce{T_1} state), then the radiative process will dominate the excited state relaxation. From the stand-point of a synthetic photo-chemist, a chromophore should ideally be designed to have as slow as possible non-radiative decay processes of the luminescent state. To identify the most important photo-physical processes and to determine their rate lies at the heart of photo-chemistry. From such information gathered, unfavoured deactivation pathways may be understood and informed design choices considered for a next iteration of the desired chromophore.
 
-			\begin{equation}
+			\begin{equation}%here are a few remarks missing about connection of kinetic interpretation of quantum yield
+			\begin{split}
 				\label{eq:QYkin}
-		 		\Phi_{Em} = \frac{\sum k_r}{\sum k_r + \sum k_{nr}} 
+		 		\Phi_\mathrm{r} &= \frac{\sum k_\mathrm{r}}{\sum k_\mathrm{r} + \sum k_\mathrm{nr}} \\
+		 		\Phi_\mathrm{r} &= \frac{k_\mathrm{r}}{\sum_i k_i} \\
+		 		\tau &= \frac{1}{\sum_i k_i} \\
+		 		\Phi_\mathrm{r} &= k_\mathrm{r}\cdot\tau
+		 	\end{split} 
 			\end{equation}
 
 
 
 	\section{Intensity and Rate of a Transition}
 	\label{sec:laws}
-	Intensity and rate of a transition are words describing different phenomena but with the same intrinsic cause --- the \emph{probability} of a transition. In this context, a transition associated with a low intensity such as a small extinction coefficient, will be a transition with a low probability. If the radiant rate constant is slow, as in a phosphorescence, a low transition probability is associated with it. These types of transitions with either a small intensity, or slow rate are said to be \emph{forbidden transitions}, whereas the opposite --- transitions with high intensities and fast rates --- will be analogously \emph{allowed transitions}. These terms should not be taken absolutely, in the sense that forbidden does not mean "will not take place at all", rather then only with a small likelihood. Within the concept of transition probabilities a set of rules describe whether a transition is allowed or forbidden, the \emph{selection rules}. To determine the selection rules and by that the intensity of a transition, however, it is necessary to look at the very nature of the interaction of light with matter. Luckily, some of the most important rules may already be understood intuitively with a classic model as an analogy, or by simple transformations of an expectation value and its wavefunctions.
+	Intensity and rate of a transition are words describing different phenomena but with the same intrinsic cause --- the \emph{probability} of a transition. In this context, a transition associated with a low intensity such as a small extinction coefficient, will be a transition with a low probability. If the radiant rate constant is slow, as in a phosphorescence, a low transition probability is associated with it. These types of transitions with either a small intensity, or slow rate are said to be \emph{forbidden transitions}, whereas the opposite --- transitions with high intensities and fast rates --- will be analogously \emph{allowed transitions}. These terms should not be taken absolutely, in the sense that forbidden does not mean "will not take place at all", rather then only with a small likelihood. Within the concept of transition probabilities a set of rules describe whether a transition is allowed or forbidden, the \emph{selection rules}. To determine the selection rules and by that the irradiance of a transition, however, it is necessary to look at the very nature of the interaction of light with matter. Luckily, some of the most important rules may already be understood intuitively with a classic model as an analogy, or by simple transformations of an expectation value and its wavefunctions.
 
 		\subsection{Matter Radiation Interaction}
 		For the purpose of this short introduction, light as an electromagnetic wave described by \emph{Maxwell's equations} may be viewed as two \emph{oscillating fields} with wave vectors perpendicular to each other, but with the same frequency. Other properties, such as the transversal oscillation to their direction of propagation, the polarisation plane and the phase shift of both fields towards each other, will be mentioned when needed, but neglected here. For electronic together with vibrational and rotational transitions, the effect of the electric field will be considered and a possible influences of a magnetic field is on the topic of the spectroscopy of \emph{nuclear magnetic} (NMR) and \emph{electron paramagnetic resonance} (EPR). 
@@ -628,10 +637,12 @@
 			In the \ce{S}-oxidised phenothiazine chromophores a benzophenone moiety may be deemed responsible for a possible ISC, following El-Sayds rule. An internal electron density reorganisation (charge transfer, see chapter~\ref{sec:nature}) following the spin flip, leads to a stronger depletion of electron density from the carbonyl, the potential culprit in a lifetime reduction, towards the \ce{SO2} moiety. The latter, not harbouring sulfur lone pairs any more, will now not be able to enable a spin flip \textit{via} $n-\pi^{\ast}$ interactions. This reasoning may be derived from the NTO calculations presented by the authors.
 
 
-		\subsection{Transfere Processes}
-		For light to trigger a chemical transformation, a photon needs to be absorbed first, according to the \emph{Grotthus-Draper law}. Hence, only when light fulfilling the resonance condition is used and the requirements of all selection rules are met by the chromophore, any net change --- physically, or chemically --- may be observed in the chromophore. Most organic substrates being colourless (or "white", if light is scattered efficiently), will not absorb light in the visible or near UV range. First at wavelength between \qtyrange{180}{230}{\nm} $\sigma\sigma^{\ast}$ transitions  will occur. With such high corresponding photonic energy administered to the substrate, bond-dissociations will not necessarily be selective. Radicals created by homolytic bond cleavage may trigger a sequence of reactions with unforeseen outcomes. Molecular organic photochemistry has therefore been limited to a few types of (important) substrates and (successful) reactions. Carbonyls, aromatic compounds, olefins and acetylenes have been transformed by Norrish-type reactions, rearrangements, $cis/trans-$isomerisations and electro-cyclisation reactions, for instance. While these reactions are all irreplaceable tools to a synthetic organic chemist, molecular photochemistry remained for the longest time a niche research topic only established amongst a few adepts. To harness the increased reactivity of excited states in chromophores, they may be introduced as light antennas, similarly to the chlorophyll and other chromophores as the light harvesting complex (LHC) in the photosystem of photosyntheses. A chromophore will absorb a photon and transfer the excited state "reactivity" to a substrate not absorbing at the wavelength range in question and by that returning to its groundstate, renewing the photo catalytic circle. A chromophore introduced to a system to change the absorptive window, is termed a \emph{sensitiser} and a reaction triggered by the absorption of a photon and subsequent "reactivity" transfer from such a sensitiser, a \emph{sensitised} reaction. To transfer the "reactivity" of an excited state to a substrate, a sensitiser may transfer its excited state energy by various mechanisms in an \emph{energy transfer} (see section~\ref{sec:eTrans}). A sensitiser in its excited state exchanging electrons with the substrate, \textit{i.e.} catalysing a redoxreaction, in a \emph{photoredox catalysis}. While the concept of photo sensitisation was already known, it received first a broader attention after MacMillans seminal publication in 2008 where his post-doc Nicewicz used \ce{Ru(bpy)^{2+}_3} (\ce{bpy} = 2,2′-bipyridine) as a sensitiser together with an organic catalyst for an asymmetric \ce{C-C} coupling in \ce{\alpha} position to an aldehyde over a sequence of two \emph{single electron transfer} processes. %DOI: 10.1126/science.1161976
-		Since then a plethora of photoredox catalysis research have been conducted, evidenced by the corresponding publication output (selected reviews) %reviews cite
-		Employing transition metal complexes as sensitiser chromophores facilitates two major advantages. Firstly, may transition metals readily change their oxidation state, also taken advantage of in (groundstate) catalysis, either homogeneously or heterogeneously. Secondly, triplet states may be easily accessed. Organic substrates with close to no spin orbit coupling will not be able to generate triplets themself. If transferred from a sensitiser to a substrate, the triplet states may due to the absence of SOC in the organic substrate even be long lived and the energy will be several orders of magnitude longer available to a potential subsequent reaction, or a photophysical process as triplet-triplet annihilation then a singlet state. Singlet lifetimes of organic compounds are of a few nano-seconds, whereas triplet state lifetimes range around hundreds of micro-seconds.
+		\subsection{Transfer Processes}
+		\label{sec:ET}
+			\subsubsection{Photosensitisation} %senistised fluorescence predicted by Franck in 1922 and demonstrated by Cario and Franck. Find original Foerster and Dexter paper
+			For light to trigger a chemical transformation, a photon needs to be absorbed first, according to the \emph{Grotthus-Draper law}. Hence, only when light fulfilling the resonance condition is used and the requirements of all selection rules are met by the chromophore, any net change --- physically, or chemically --- may be observed in the chromophore. Most organic substrates being colourless (or "white", if light is scattered efficiently), will not absorb light in the visible or near UV range. First at wavelength between \qtyrange{180}{230}{\nm} $\sigma\sigma^{\ast}$ transitions  will occur. With such high corresponding photonic energy administered to the substrate, bond-dissociations will not necessarily be selective. Radicals created by homolytic bond cleavage may trigger a sequence of reactions with unforeseen outcomes. Molecular organic photochemistry has therefore been limited to a few types of (important) substrates and (successful) reactions. Carbonyls, aromatic compounds, olefins and acetylenes have been transformed by Norrish-type reactions, rearrangements, $cis/trans-$isomerisations and electro-cyclisation reactions, for instance. While these reactions are all irreplaceable tools to a synthetic organic chemist, molecular photochemistry remained for the longest time a niche research topic only established amongst a few adepts. To harness the increased reactivity of excited states in chromophores, they may be introduced as light antennas, similarly to the chlorophyll and other chromophores as the light harvesting complex (LHC) in the photosystem of photosyntheses. A chromophore will absorb a photon and transfer the excited state "reactivity" to a substrate not absorbing at the wavelength range in question and by that returning to its groundstate, renewing the photo catalytic circle. A chromophore introduced to a system to change the absorptive window, is termed a \emph{sensitiser} and a reaction triggered by the absorption of a photon and subsequent "reactivity" transfer from such a sensitiser, a \emph{sensitised} reaction. To transfer the "reactivity" of an excited state to a substrate, a sensitiser may transfer its excited state energy by various mechanisms in an \emph{energy transfer} (see section~\ref{sec:eTrans}). A sensitiser in its excited state exchanging electrons with the substrate, \textit{i.e.} catalysing a redoxreaction in a \emph{photoredox catalysis}. While the concept of photosensitisation was already known for some time, it received first a broader attention after MacMillans seminal publication in 2008 where his post-doc Nicewicz used \ce{[Ru(bpy)_3]^{2+}} (\ce{bpy} = 2,2′-bipyridine) as a sensitiser together with an organic catalyst for an asymmetric \ce{C-C} coupling in \ce{\alpha} position to an aldehyde over a sequence of two \emph{single electron transfer} SET processes. %DOI: 10.1126/science.1161976
+			Since then a plethora of photoredox catalysis research have been conducted, evidenced by the corresponding publication output (selected reviews) %reviews cite
+			Employing transition metal complexes as sensitiser chromophores facilitates two major advantages. Firstly, may transition metals readily change their oxidation state, also taken advantage of in (groundstate) catalysis, either homogeneously or heterogeneously. Secondly, triplet states may be easily accessed. Organic substrates with close to no spin orbit coupling will not be able to generate triplets themself. If transferred from a sensitiser to such a substrate, the triplet states may due to the absence of SOC in the organic substrate even be long lived and the energy will be several orders of magnitude longer available to a potential subsequent reaction, or a photophysical process as triplet-triplet annihilation then a singlet state. Singlet lifetimes of organic compounds are of a few nano-seconds, whereas triplet state lifetimes range around hundreds of micro-seconds.
 
 			%importance to sensitised reactions etc
 			\subsubsection{Energy Transfer}
@@ -653,7 +664,7 @@
 				\caption{Depiction of an energy transfer \textit{via} a vertical \textbf{\sffamily A}} Förster  \textbf{\sffamily B}} a horizontal Dexter mechanism.}
 			\end{figure}
 
-			\paragraph{Förster Resonance Energy Transfer} was originally called \emph{Fluorescence Resonance Energy Transfer}. As this is a nonradiative (non-fluorescent), \textit{i.e.} resonant, energy transfer, the 'F' in the standing abbreviation FRET was later replaced with 'Förster', as he delivered the quantitative quantum mechanical explanation.%original papers -see Wirz
+			\paragraph{Förster Resonance Energy Transfer} was originally called \emph{Fluorescence Resonance Energy Transfer}. As this is a non-radiative (non-fluorescent), \textit{i.e.} resonant, energy transfer, the 'F' in the standing abbreviation FRET was later replaced with 'Förster', as he delivered the quantitative quantum mechanical explanation.%original papers -see Wirz
 			As explained earlier, a chromophore needs a permanent dipole in the groundstate to be able to absorb light. This dipole moment of a donor chromophore may interact with the dipole moment of an acceptor substrate. As the dipole moment changes during a transition, also the overall momentum need to be conserved in the dipole coupled \ce{D^{\ast}A} pair. Hence, will the change in dipole moment during the transition from an excited state to the groundstate of the donor 'induce' a dipole change in the acceptor, resulting in an excited state on the acceptor molecule. This may be viewed as a vertical ET, as the transition of an electron to a higher MO on the acceptor induces a transition to the groundstate on the excited donor. Such a FRET may only occur if the excitation energy of the donor is similar, or greater then the excitation energy of the acceptor $\Delta E_d \geq \Delta E_a$. If this condition is not fulfilled, the energy from the donors first excited state will only be transferred to higher vibrational states of the acceptors groundstate. Hence, the energy will dissipate in heat during VR. This is a typical case for solvent quenching of a chromophores excited state and should be avoided as much as possible. 
 
 			The kinetic for a Förster type energy transfer follows again the golden rule:
@@ -664,14 +675,14 @@
 
 			where $V_{da}$ are the matrix elements of the perturbation operator $\hat{V}_{da}$ coupling the donors and the acceptors electronic state. $R$ is the momentary distance between donor and acceptor with $R_0$ being the \emph{critical distance} where transfer probability is equal to spontaneous decay, so that $R_0 = R$. $\tau^0_d$ is the singlet excited state lifetime of the donor in absence of the acceptor. 
 
-			The critical distance $R_0$ is as a measure for the efficiency of ET and dependent on the spectral overlap $J_{da}$ (not the same as within radiative energy transfer). The interaction between dipoles are dependent on their orientation towards each other. This is taken into account with the \emph{orientation factor} $\kappa$ within FRET. Notably is $R_0$ also dependent on the fluorescent quantum yield of the donor in absence of the acceptor $\Phi^0_d$. $\rho$ denotes the average refraction index of the investigated mixture. 
+			The critical distance $R_0$ is as a measure for the efficiency of ET and dependent on the spectral overlap $J_{da}$ (similar, but not the same as within radiative energy transfer). The interaction between dipoles are dependent on their orientation towards each other. This is taken into account with the \emph{orientation factor} $\kappa$ within FRET. Notably is $R_0$ also dependent on the fluorescent quantum yield of the donor in absence of the acceptor $\Phi^0_d$. $\rho$ denotes the average refraction index of the investigated mixture. 
 
 			\begin{equation}
 				\label{eq:R0_FRET}
 				R^6_0 = \frac{9\ln(10)\kappa^2\Phi^0_d}{128\pi^5 N_A\rho^4}\cdot J_{da}
 			\end{equation}
 
-			The distance dependency outlined in eq.~\ref{eq:R0_FRET} is observed to be very consistent. So it is possible to use the steady-state fluorescence intensity of the donor in the presence $I^a$ and absence $I^0$ of the acceptor under else strictly the same conditions as a \emph{molecular ruler} to measure distances $R$ between a donor/acceptor pair used as fluorescence markers in fluorescence spectroscopy and microscopy.
+			The distance dependency outlined in eq.~\ref{eq:R0_FRET} is observed to be very consistent. So it is possible to use the ratio of the steady-state fluorescence intensity of the donor in the presence $I^a$ and absence $I^0$ of the acceptor under else strictly the same conditions as a \emph{molecular ruler} to measure distances $R$ between a donor/acceptor pair used as fluorescence markers in fluorescence spectroscopy and microscopy.
 
 			\begin{equation}
 				R = R_0 \left(\frac{I^a}{I^0}\right)^{\frac{1}{6}}
@@ -679,26 +690,233 @@
 
 			The quantities $k_{FRET}$ and $R_0$ will also depend on the acceptor concentration.
 
-			In solids, or otherwise organised systems, as in the protein cluster of photosystem I/II, the number of donors $N_d$ and acceptors $N_a$ each of them will 'see' will exceed one. The donors and acceptors will not interact pair wise as is the case for  diffusion controlled encounters in solutions. These non-pair wise interactions may be viewed as more delocalised electronic interactions that lead to faster transfer processes. Such \emph{exciton hopping} is the main mechanism of energy transfer within semiconductors, but also in other organised systems.
+			In solids, or otherwise organised systems, as in the protein cluster of photosystem I/II, the number of donors $N_d$ and acceptors $N_a$ each of them will 'see' will exceed one. The donors and acceptors will not interact pair wise as is the case for  diffusion controlled encounters in solutions. These non-pair wise interactions may be viewed as more delocalised electronic interactions that lead to faster transfer processes. Such \emph{exciton hopping} is the main mechanism of energy transfer within semiconductors, besides other organised systems.
+
+			\paragraph{Dexter ET.} Within the FRET formalism outlined in eq.~\ref{eq:R0_FRET}, the efficiency of the energy transfer is dependent on the fluorescence quantum yield $Phi^0_d$ of the donor \ce{D^{\ast}} in the absence of the acceptor. So an ET to the acceptors triplet state would start from an excited singlet state on the donor. However, singlet-triplet absorption of \ce{A}, necessary to produce a triplet state on \ce{A}, is negligible small in (most) small organic substrates. Hence, FRET is representing an energy transfer mechanism for singlet-singlet energy transfer. Although not strictly forbidden, a singlet-triplet ET would proceed with a very small probability. In contrast to spectroscopy and microscopy fast decaying luminescent singlet states transferred by FRET are not very useful for photochemistry. A chemical transformation takes place on a much longer time scale then the lifetime of an excited singlet may provide --- an advantage in spectroscopy, where the substrate of interest may be investigated without alteration. For any productive process following ET --- being it a chemical transformation or  a different photophysical event, such as triplet-triplet annihilation --- to outcompete any non-productive processes, the latter should have slow rates. On substrates with essentially no SOC, a triplet state will have a lifetime of several hundred \unit{\us}, whereas a transition metal based chromophore may generate triplet states with efficiencies close to unity. Within a \emph{triplet-triplet energy transfer} TTET from a triplet sensitiser to an acceptor lies the key to work with triplet states on substrates not being able to generate those themself.
+
+			Dexter delivered an explanation for the observed TTET. It may be considered an horizontal ET, where the excited state electron of the donor is transferred to the acceptor and an electron of the same spin from the groundstate of the acceptor to the donor. For such a synchronous dual exchange of electron mechanism to proceed, a good overlap of the participating orbitals is crucial. This is the case if the absolute energy levels of the frontiers each match. In contrast to FRET where the transfer process only depends on the relative energy gap of the frontier orbitals. To have a good thermodynamic drivingforce, the triplet energy of the donor should exceed that of the acceptor ($\Delta_TE = E_T(A) - E_T(D) \leq 0$). An endothermic TTET may be enabled entropically by a large excess of acceptor concentration,%cite TTA-UC paper about this
+			or thermally, following the Boltzmann distribution. Additionally, the critical transfer distance becomes essentially the sum of the van der Waals radii of \ce{D} and \ce{A} to ensure a good molecular orbital overlap between \ce{D} and \ce{A}. Thus bulky groups on a ligand within a metal complex chromophore may hinder a TTET. If the triplet state on the donor is centred on or nearby the central metal ion in a complex, a TTET will also be unlikely due to the poor overlap. This may be case in purely metal centred transitions (see section~\ref{sec:nature}).
 
 			\subsubsection{Electron Transfer}
+			An excited chromophore may partake in a redox reaction --- an electron transfer --- with a suitable substrate. If the reduction potential of the sensitising chromophore is more negative then the substrates, an electron will be donated by the sensitiser to the substrate as an acceptor and if the sensitisers reduction potential is more positive then the substrates, an electron will be accepted by the sensitiser from a donating substrate. 
 
-			\subsubsection{Kinetics of Transfer Processes}
-			%solvent cage
-	
+			According to Koopman's theorem, %\cite
+			as a zeroth order approximation, are the orbital energies of a molecules HOMO and LUMO corresponding to its ionisation energy $I$ and electron affinity $E_{ea}$, respectively. Hence, will the HOMO-LUMO gap correspond to the first vertical transition energy between the two states. From fig.~\ref{fig:ElT}, panel \textbf{\sffamily A} follows that in its excited state, a chromophores $E_{ea}$ is increased and $I$ is decreased, respectively, by the HOMO-LUMO gap. 
+ 
+			\begin{figure}[h]
+				\centering
+				\label{fig:ElT}
+				\includegraphics[scale=1]{./intro/ElT.png}
+				\caption{ \textbf{\sffamily A}} F  \textbf{\sffamily B}}.}
+			\end{figure}
+
+			Experimentally will a molecule with a large $E_{ea}$ be a strong oxidant, whereas a small $I$ indicates a good reductant. The excited states standard reduction potential $^{\ast}E°_{red}$, as well as the excited states standard oxidation potential $^{\ast}E°_{ox}$ are given by their respective groundstate standard potential, $E°_{red}$ and $E°_{ox}$, altered by the transition energy between the lowest vibrational levels of the electronic states $\Delta E_{0-0'}$, according to eq.~\ref{eq:ElTredox}% explain more!!!!
+
+			\begin{equation}
+			\label{eq:ElTredox}
+			\begin{split}
+				^{\ast}E°_{red} &= E°_{red} - \Delta E_{0-0'} \\
+				^{\ast}E°_{ox} &= E°_{ox} + \Delta E_{0-0'} 
+			\end{split}
+			\end{equation}
+
+			The potential difference between ground- and excited state is substantial, as illustrated by the famous \ce{[Ru(bpy)3]^{2+}} as a transition metal type sensitising complex. in its groundstate \ce{[Ru(bpy)3]^{2+}} is a bad reductant and oxidant, exhibiting reduction potentials of 
+
+			\begin{equation}
+			\begin{split}
+				\item[\ce{[Ru^{III}] + e- -> [Ru^{II}]} \qquad \Delta E° = +\qty{1.26}{\V} \\
+				\item[\ce{[Ru^{II}] + e- -> [Ru^{I}]} \qquad \Delta E° = -\qty{1.28}{\V}
+			\end{split}
+			\end{equation}
+
+			With an absorption onset at \qty{540}{\nm}, \ce{[Ru(bpy)3]^{2+}} has a $\Delta E_{0-0'}$ of \qty{2.30}{\eV}. According to eq.~\ref{eq:ElTredox} \ce{[Ru(bpy)3]^{2+}} will hence exhibit an excited state reduction and oxidation potential of \qty{-1.04}{\V} and \qty{+1.02}{\V}, respectively, indicating \ce{[Ru(bpy)3]^{2+}} to be a reasonably good reductant \emph{and} oxidant in its (first) excited state. 
+
+			To form a catalytic circle in photoredox catalysis, the sensitiser will need to be re-oxidised or re-reduced to regain its original oxidation state. Either sacrificial acceptors, or donors are often used to replenish the catalyst. Also the substrate itself may undergo a second SET step after the first redox event to close the catalytic circle. After excitation, the photoredox catalyst will donate or accept an electron by the substrate or the sacrificial reagent --- it will be \emph{quenched}.
+
+			Looking at the \emph{Latimer diagram} of \ce{[Ru(bpy)3]^{2+}} in fig.~\ref{fig:ElT}, panel \textbf{\sffamily B}, two oxidation and reduction paths each are depicted; one in the groundstate and one in the excited state. Considering first a catalytic reduction: A substrate with a more positive reduction potential then \qty{-1.04}{\V} may quench the sensitiser oxidatively and be reduced prior a sacrificial donor may re-reduce \ce{[Ru^{III}(bpy)3]^{3+}} to \ce{[Ru^{II}(bpy)3]^{2+}}. Alternatively, the sensitiser may also be quenched reductively by a sacrificial donor as first step after excitation. Now a substrate with a more positive reduction potential then \qty{-1.28}{\V} may be reduced. The same goes for an oxidation, where the groundstate potential of \ce{[Ru^{III}(bpy)3]^{3+}} is more oxidising then the excited state of \ce{[Ru(bpy)3]^{2+}}. If the excited state potentials are smaller or greater then the corresponding re-oxidation/re-reduction potentials in the groundstate depend of course on the catalyst in question. It illustrates, however, the versatility of photoredox catalysis. 
+
+			A wish list for the "perfect" photoredox catalyst may be found in this tutorial review by Arias-Rotondo and McCusker.%\cite{McCuscer2016} DOI: 10.1039/c6cs00526h
+
+			\subsubsection{Solvent Effects on the Transfer Kinetics}%change titel --- this is about quenching kinetics...
+			Energy and electron transfer processes from an electronically excited sensitiser to a substrate are often very efficient. It is not uncommon that every encounter between sensitiser and substrate lead to a transfer. The rate limiting step in solution is therefore the diffusion --- the transfer becomes diffusion controlled. Prior to the bimolecular transfer, the donor and acceptor form an \emph{encounter complex} \ce{D\bond{..}A}. In solution, the solvent molecules form a solvation shell around the solutes \ce{D} and \ce{A}, here the sensitiser and the substrate in their role as either donor \ce{D} or acceptor \ce{A}. The solvation shell stabilises the encounter complex so that \ce{D} and \ce{A} may undergo several collisions to form their transfer product \ce{P} before escaping the solvation \emph{cage} again. The kinetic rate law takes the form of the classical consecutive reaction with an equilibrium:
+
+			\begin{scheme}
+			\label{scm:encounterCmplx}
+				\ce{D + A <=>[$k$_d][$k$_{-d}] D\bond{..}A ->[$k$_P] P}
+			\end{scheme}
+		
+			Where $k_d$ is the bimolecular rate of diffusion, $k_\mathrm{-d}$ the first-order rate of \emph{cage escape} and $k_\ce{P}$ the first-order rate of product formation. In the special case of transfer reactions, the rate of product formation is equal to the transfer rate. In other words the rate at which a substrate or sacrificial agent may quench an excited state of a sensitiser \ce{^\ast S}, the \emph{quenching rate} $k_\mathrm{q} \equiv k_\ce{P}$. Quenching in this context is always referring to the quenching of any signal of a chromophores excited state, being it the quenching of its fluorescence, phosphorescence, or excited state absorption, regardless of the quenching mechanism in operation. 
+			Invoking Bodenstein's quasi-statical principle for the encounter complex concentration \ce{[D\bond{..}A]}, due to the fast product formation, the rate of product formation may be given for the limiting case of a much faster product formation then cage escape $k_\mathrm{-d} \ll k_\ce{P}$. 
+
+			\begin{equation}
+				\frac{\mathrm{d}[\ce{P}]}{\mathrm{d}t} = k_\mathrm{d}[\ce{D}][\ce{A}]
+			\end{equation}
+
+			For large spherical solutes \emph{Smoluchowski} derived the expression eq.~\ref{eq:smoluchowski} for the rate of diffusion
+
+			\begin{equation}
+			\label{eq:smoluchowski}
+				k_\mathrm{d} = 4\pi R_\ce{DA} D N_A
+			\end{equation}
+
+			where $D$ is the combined diffusion coefficients $D = D_\ce{A} + D_\ce{B}$ and $R_\ce{DA}$ the distance between \ce{D} and \ce{A} where the transfer occurs. The \emph{Stokes-Einstein} equation~\ref{eq:stokes-einstein} gives the individual diffusion coefficients
+
+			\begin{equation}
+			\label{eq:stokes-einstein}
+				D_\ce{A} = \frac{k_\mathrm{B} T}{6\pi\eta r_\ce{A}}
+			\end{equation}
+
+			where $k_\mathrm{B}$ is the Boltzmann constant and $\eta$ the solvent viscosity, usually quoted in centiPoise (\qty{1}{cP} = \qty{1}{\milli\pascal\second}).
+			Given that $D_\ce{A}$ is experimentally accessible by \ce{^1H-NMR} DOSY experiments, for instance, the interesting quantity of $r_\ce{A}$, the \emph{hydrodynamic radius} of \ce{A} may be determined from eq.~\ref{eq:stokes-einstein}. If the radii of the \ce{D} and \ce{A} are similar, so that $r_\ce{D} \sim r_\ce{A} \approx \sfrac{1}{2}R_\ce{DA}$, Smoluchowski's eq.~\ref{eq:smoluchowski} may be simplified, taking eq.~\ref{eq:stokes-einstein} into account
+
+			\begin{equation}
+			\label{eq:diffRate}
+				k_\ce{d} = \frac{8}{3}\cdot\frac{RT}{\eta}
+			\end{equation}
+
+			From eq.~\ref{eq:diffRate} may now the diffusion rate $k_\mathrm{d}$ of a solute be estimated from the viscosity $\eta$ of pure solvents. If the observed overall quenching rate approaches the diffusion rate $k_\mathrm{d} \sim k_\mathrm{q}$, $k_\mathrm{d}$ may serve as an upper rate limit for quenching processes in different solvents:
+
+			\begin{table}[!h]
+			\label{tab:diffLimit}
+			\caption{Viscosities of pure solvents and diffusion controlled rate constants as determined by eq.~\ref{eq:diffRate}.}
+			\begin{minipage}{1\textwidth}
+			\begin{tabular}{%
+				@{}llll@{}%
+				}\toprule
+				\textbf{Solvent} & $\mb{\eta}$/\unit{cP} & $\mb{k_\mathrm{d}}$/\unit{\L\per\mol\per\s} & \textbf{Ref.} \\ \midrule
+				Toluene\footnote[a]{@\qty{20}{\degreecelcius}} & \num{0.59} & \num{1.1e10} & \cite{} \\
+				\textit{n}-Hexane\footnote[b]{@\qty{25}{\degreecelcius}} & \num{0.2949} & \num{2.2e10} & \cite{} \\
+				\textit{n}-Heptane\footnote[b]{@\qty{25}{\degreecelcius}} & \num{0.3890} & \num{1.7e10} & \cite{} \\
+				Cyclohexane\footnote[b]{@\qty{20}{\degreecelcius}} & \num{0.9713} & 6.7e9 & \cite{} \\
+				THF\footnote[b]{@\qty{25}{\degreecelcius}} & \num{0.48} & \num{1.4e10} & \cite{} \\
+				MeTHF\footnote[b]{@\qty{25}{\degreecelcius}} & \num{0.5341} & \num{1.2e10} & \cite{}\\ 
+				\bottomrule
+			\end{tabular}%add citations!!
+			\end{minipage}
+			\end{table}		
+
+			Solvent molecules tend to be rather small, so that the solute will be significantly larger and a solvation sphere will be formed. Only for this case is eq.~\ref{eq:diffRate} valid. With oxygen \ce{O2} having a triplet groundstate, it is an effective quencher for excited triplet states of sensitisers. Its transfer rates regularly exceeds the diffusion limit. \ce{O2} is so small that it may slip by the solvent molecules so eq.~\ref{eq:smoluchowski} is better to determine transport limitations of energy transfers to \ce{O2}.
+
+			Encounter complexes between neutral molecules have an average lifetime of \qty{100}{\ps} in solvents of low viscosity. In this short time frame were $k_\mathrm{d} \sim k_\mathrm{-d}$ the molecules will collide with a frequency of \qtyrange{e10}{e11}{\per\s} and will first after \qty{1}{\ns} have diffused so far away that a re-encounter is unlikely. Inter system crossing with frequencies of \qtyrange{e5}{e10}{\per\s} is unlikely to take place, preserving the spin state during an encounter. This raises the question what the overall spin state of the encounter complex is and how that determines the product distribution \ce{P} and its rate of formation (\textit{e.g.} the quenching rate). For any two reactants \ce{A} and \ce{B} exhibiting a multiplicity exceeding unity, scheme~\ref{scm:encounterCmplx} is expanded in scheme~\ref{scm:encounterMult} to explicitly include their respective multiplicity $t= 2S_\ce{A}+1$, $u = 2S_\ce{B}+1$ with $S_\ce{A}$ and $S_\ce{B}$ being the spin quantum number of \ce{A} and \ce{B}, respectively. 
+
+			\begin{scheme}
+			\label{scm:encounterMult}
+				\ce{$t$^A + $u$^B <=>[$k$_d][$k$_{-d}] {$\left(2S+1\right)$}^(A\bond{..}B) ->[$k$_P] P}
+			\end{scheme}
+
+			with
+
+			\begin{equation}
+				S = S_\ce{A} + S_\ce{B}, S_\ce{A} + S_\ce{B} - 1,\ldots,S_\ce{A} - S_\ce{B}
+			\end{equation}
+
+			and the product $t\cdot u$ being the overall number of possible spin states (the sum of all possible multiplicities) of the encounter complex. If the energy differences $\Delta_SE$ between the centre of possible multiplicities of a particular encounter complex is small, $\Delta_SE \ll k_\mathrm{B}T$, all spin states will posses a similar probability of formation. Hence, an encounter complex with a specific multiplicity (number of states with same spin) will exhibit a probability of formation of its specific multiplicity divided by the number of the overall possible spin states based on the spin states of the two encountering molecules. The latter ratio 
+
+			\begin{equation}
+			\label{eq:spinFctr}
+				\sigma = \frac{\left(2S + 1\right)}{t\cdot u}
+			\end{equation}
+
+			is called the \emph{spin statistical factor} $\sigma$. 
+
+			During a triplet-triplet annihilation process, two chromophore molecules in their triplet state $S_\ce{A} = S_\ce{B} = 1$ collide. Their encounter complex will have the possible spin states 
+
+			\begin{equation}
+			\begin{split}
+				S &= S_\ce{A} + S_\ce{B} &= 2 \qquad \mathrm{quintet} \\
+				  &= S_\ce{A} + S_\ce{B} - 1 &= 1 \qquad \mathrm{triplet} \\
+				  &= S_\ce{A} - S_\ce{B} &= 0 \qquad \mathrm{singlet} 
+			\end{split}
+			\end{equation}
+
+			with the overall number of $t\cdot u = 3\cdot 3 = 9$ possible spin states. This leaves a spin statistical factor of $\sigma = \sfrac{5}{9}, \sfrac{3}{9} \textrm{and} \sfrac{1}{9}$ for the encounter complex with a quintet, triplet and singlet multiplicity, respectively. In principal, if the higher multiplicities of an annihilator are energetically accessible, a spin product distribution is expected according to the spin statistical factor. Whether these spin states will all be accessible and what happens after the encounter complex to form the product will be at the heart of this thesis and will be discussed in chapter~\ref{ch:sTTA-UC}.
+
+			Another reaction preceded by the collision of two molecules in their triplet states in an encounter complex is the triplet sensitised singlet oxygen formation by a triplet sensitiser as exemplified by scheme~\ref{scm:rateMult}. The only product possible is oxygen in its singlet state. Earlier it was already discussed that the rate of a reaction is proportionate to its probability. Thus, the rate of formation of an encounter complex of a specific multiplicity is proportionate to the spin statistical factor for that multiplicity $\sim\sigma k_\mathrm{d}$. For the singlet oxygen production this means that the singlet encounter complex will be formed with the rate of $\sigma\cdot k_\mathrm{d} = \sfrac{1}{9}k_\mathrm{d}$. All the encounter complexes of the sensitiser and \ce{O2} with quintet and triplet multiplicities will be formed as well with their respective rate as their energy differences are small. However, only the singlet encounter complex will lead to the product with a fast rate of product formation $k_\ce{P}$, so that the encounter complex formation will be the rate determining step. All other encounter complexes with a \textit{non}-singlet multiplicity will simply diffuse away again. 
+
+			\begin{scheme}[h]
+				\centering
+				\label{scm:rateMult}
+				\includegraphics[scale=1]{./intro/rateMultiplicity.png}
+				\caption{Rate of formation of encounter complexes with different multiplicities by two colliding molecules in their triplet state.}
+			\end{scheme}
+
+
 	\section{Nature of the Excited State}	
-	\label{sec:nature}	 
+	\label{sec:nature}	
+
+	 
+
+	\subsection{Singlet-Triplet Splitting in Chromophores}
 
 
 
 	\section{Probing the Mechanism} 
-
-	
 	%quantum-yield: inner filter effect
-	%kinetic of tta: measure spin-statistical factor
+	%kinetic of tta: measure spin-statistical factor 
 	\label{sec:mechanism}
-			
+
+	\subsubsection{Quantum Yield Determination}
+	\label{sec:QYdeterm}
+
+ 
+	In section~\ref{sec:ET}, several energy transfer processes were discussed involving an excited sensitising chromophore \ce{S^\ast} and a suitable substrate --- the quencher \ce{Q}. In most cases does the sensitiser exhibit a radiative excited state, either a singlet or triplet. The energy transfer to \ce{Q} will hence correspond to the quenching of said sensitisers emission. The quenching process will reduce the sensitisers excited state lifetime $\tau$ and its radiative quantum yield $\Phi_\mathrm{r}$. Non-radiative, dark state sensitisation is also possible as demonstrated by the successful implementation of \ce{Fe(II)} based sensitised solar cells %\cite{Waernmark}
+
+	Exergonic electron and energy transfers will usually take place at every collision of \ce{S^\ast} and \ce{Q}, leading to diffusion controlled quenching with rates in order of $k_\ce{q}\sim \qtyrange{e9}{e10}{\L\per\mol\per\s}$. A rate significantly lower indicates a hindrance, being the transfer is slightly endothermic or molecular orbital overlap (in Dexter type ET) is poor due to sterically demanding groups on either \ce{S^\ast} or \ce{Q}. The triplet states of organic molecules are mostly non-radiative states. A way to estimate their triplet energy experimentally may be to check if a TTET is possible from a series of triplet sensitisers with a known triplet energy. Endothermic ET will only be possible in appreciable yield with very large excess \ce{[Q]}.
+	
+	The observed total decay of \ce{S^\ast} in the presents of a quencher is a sum of its total decay rate without a quencher present $\sum_i k^0_i = \sum k^0_\mathrm{r} + \sum k^0_\mathrm{nr}$ (see eq.~\ref{eq:QYkin}) and the quenching rate $k_\mathrm{q}$
+
+	\begin{equation}
+		\label{eq:quenchRate}
+		-\frac{\mathrm{d}[\ce{S^\ast}]}{\mathrm{d}t} = \sum_i k^0_i[\ce{S^\ast}] + k_\mathrm{q}[\ce{S^\ast}][\ce{Q}] 
+	\end{equation}
+
+	For a substantial quenching of \ce{[S^\ast]} to take place, must the quenching rate exceed the decay rate of \ce{S^\ast} without a quencher present $k_\mathrm{q}[\ce{S^\ast}][\ce{Q}] \gg \sum_i k^0_i[\ce{S^\ast}]$. This is achievable for fast decay rates $\sum_i k^0_i$ (for fluorescence with lifetimes $\tau = \sfrac{1}{\sum_i k^0_i}$ within a few \unit{\ns}) with an excess of quencher. 
+	With a large enough excess quencher $\ce{[Q]} \gg \ce{[S^\ast]}$, the fraction that partake in the quenching process is negligibly small and the quencher concentration remains approximately constant. For a given quencher concentration, eq.~\ref{eq:quenchRate} then becomes pseudo-first order in the sensitisers excited state concentration
+
+	\begin{equation}
+	\begin{split}
+		-\frac{\mathrm{d}[\ce{S^\ast}]}{\mathrm{d}t} &= \left(\sum_i k^0_i + k_\mathrm{q}[\ce{Q}] \right)[\ce{S^\ast}] \\
+		&= k_\mathrm{obs}\cdot[\ce{S^\ast}]
+	\end{split}
+	\end{equation}
+
+	Considering eq.~\ref{eq:QYkin} for the radiative quantum yield $\Phi^0_\mathrm{r}$ without a quencher present, the reduced radiative quantum yield in presence of a quencher $\Phi^\mathrm{q}_\mathrm{r}$ may be written for \ce{S^\ast} as
+
+	\begin{equation}
+		\Phi^\mathrm{q}_\mathrm{r} = \frac{k^0_\mathrm{r}}{\sum_i k^0_i + k_\mathrm{q}\ce{[Q]}}
+	\end{equation}
+
+	If $\Phi^0_\mathrm{r}$ is now divided by $\Phi^\mathrm{q}_\mathrm{r}$ one arrive at
+
+	\begin{equation}
+	\label{eq:SVderiv}
+	\begin{split}
+		\frac{\Phi^0_\mathrm{r}}{\Phi^\mathrm{q}_\mathrm{r}} &= \frac{k^0_\mathrm{r}\left(\sum_i k^0_i + k_\mathrm{q}\ce{[Q]} \right)}{k^0_\mathrm{r}\sum_i k^0_i} \\
+		&= 1 + \frac{k_\mathrm{q}\ce{[Q]} }{\sum_i k^0_i}
+	\end{split}
+	\end{equation}
+
+	From eq.~\ref{eq:SVderiv} follows that the ratio $\sfrac{\Phi^0_\mathrm{r}}{\Phi^\mathrm{q}_\mathrm{r}}$ increases linearly with an increasing quencher concentration \ce{[Q]} and has a y-intercept of $1$. The slop, the thought of quantity, is called the \emph{Stern-Vollmer coefficient} $K_\mathrm{SV}$. To measure the quantum yield directly for several quencher concentrations would be tedious and error-prone (see section~\ref{sec:QYdeterm}). By plotting the ratio $\sfrac{\Phi^0_\mathrm{r}}{\Phi^\mathrm{q}_\mathrm{r}}$ against \ce{[Q]}, most factors such as instrument corrections, solvent dependencies and references will cancel out. Particular useful is that the quantum yield is linked to several other observables. Eq.~\ref{eq:...} describes a chromophores luminescent quantum yield in dependency of the integrated area $F_\mathrm{r}$ under the luminescence spectrum. Considering that the same sensitiser and also otherwise same conditions are employed during quenching experiments, the ratio $\sfrac{\Phi^0_\mathrm{r}}{\Phi^\mathrm{q}_\mathrm{r}}$ becomes $\sfrac{F^0_\mathrm{r}}{F^\mathrm{q}_\mathrm{r}}$ as all other factors cancel each other out. If the shape of the luminescent spectrum of the sensitiser is not changing with the addition of quencher, also the residual irradiance $I_\lambda$ at a specific wavelength may be used. And finally, eq.~\ref{eq:QYkin} links the excited state lifetime to the quantum yield, so also the ratio $\sfrac{\tau^0}{\tau^\mathrm{q}}$ increases linearly with an increasing quencher concentration. Considering the mentioned equivalences, eq.~\ref{eq:SVderiv} becomes the \emph{Stern-Vollmer equation}~\ref{eq:SV} and because $\sfrac{1}{\sum_i k^0_i} = \tau^0$, $K_\mathrm{SV} = k_\mathrm{q}\tau^0$.
+
+	\begin{equation}
+	\label{eq:SV}
+		\frac{\Phi^0_\mathrm{r}}{\Phi^\mathrm{q}_\mathrm{r}} = \frac{F^0_\mathrm{r}}{F^\mathrm{q}_\mathrm{r}} = \frac{I^0_\lambda}{I^\mathrm{q}_\lambda} = \frac{\tau^0}{\tau^\mathrm{q}} = 1 + K_\mathrm{SV}\ce{[Q]}
+	\end{equation}
+
+	If now the chosen quantity, being it $F_\mathrm{r}$, $I_\lambda$ or $\tau$, is determined at a series of different quencher concentrations, the Stern-Vollmer coefficient $K_\mathrm{SV}$ may be determined as the slop of a linear regression. Excess of quencher above \qty{100}{equiv} to \qty{5000}{equiv} of sensitiser concentration are not uncommon.
+
+%static and dynamic quenching.. short 
+
+	A time dependent measurement is strictly necessary to separate the Stern-Vollmer coefficient into the two quantities, the quenching rate constant $k_\mathrm{q}$ and the unquenched lifetime $\tau^0$ of the sensitiser. The observed luminescent decay rate of the sensitiser $k_\mathrm{obs}$ are plotted as a function of the employed quencher concentrations. Thus, $\sfrac{1}{\tau^0}$ and $k_\mathrm{q}$ are determined as the y-intercept and as the slop, respectively (eq.~\ref{eq:SVkobs}).
+
+	\begin{equation}
+	\label{eq:SVkobs}
+		k_\mathrm{obs} = \sfrac{1}{\tau^0} + k_\mathrm{q}\ce{[Q]}
+	\end{equation}
+	
+	However, often $\tau^0$ is already well known, either because the sensitiser is well established, or from preliminary studies to establish the photophysical characteristics of a newly developed chromophore suitable for sensitisation. 
 
 \chapter{Isocyanide Complexes}
 
 \chapter{Sensitised Triplet-Triplet Annihilation Photon Upconversion}
+\label{ch:sTTA-UC}
